@@ -1,0 +1,24 @@
+[viewBag]
+snippetCode = "first-screen"
+snippetName = "Первый экран"
+snippetProperties[titile][title] = "Заголовок"
+snippetProperties[titile][type] = "string"
+snippetProperties[titile][default] = ""
+snippetProperties[titile][options][] = ""
+snippetProperties[dsc][title] = "Описание"
+snippetProperties[dsc][type] = "string"
+snippetProperties[dsc][default] = ""
+snippetProperties[dsc][options][] = ""
+snippetProperties[bgClass][title] = "Класс фона"
+snippetProperties[bgClass][type] = "string"
+snippetProperties[bgClass][default] = ""
+snippetProperties[bgClass][options][] = ""
+==
+<div class="first-screen  {{ bgClass ? 'first-screen--' ~ bgClass }}" id="pageFirstScreen">
+  <div class="container">
+    <div class="first-screen__inner">
+      <h1 class="first-screen__title">{{ title|raw }}</h1>
+      {{ dsc|raw }}
+    </div>
+  </div>
+</div>

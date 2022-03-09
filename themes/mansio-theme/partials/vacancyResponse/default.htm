@@ -1,0 +1,38 @@
+[viewBag]
+==
+<form data-request="{{ __SELF__ }}::onFormSubmit" class="contacts-form__form">
+
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="input-wrapper">
+        <svg width="18" height="18">
+            <use xlink:href="{{ 'assets/images/sprite_auto.svg#contacts-icon-1'|theme}}"></use>
+        </svg>
+        <input type="text" id="nameApplicant" name="nameApplicant" class="form-input"
+            placeholder="Как к вам обращаться?">
+        <label for="nameApplicant">Введите ваше имя:</label>
+    </div>
+
+
+    <div class="input-wrapper">
+        <svg width="18" height="18">
+            <use xlink:href="{{ 'assets/images/sprite_auto.svg#contacts-icon-2'|theme}}"></use>
+        </svg>
+        <input type="tel" id="telApplicant" name="telApplicant" class="form-input" placeholder="Ваш номер телефона?" required>
+        <label for="telApplicant">Введите номер телефона:</label>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <button id="simpleContactSubmitButton" type="submit" class="btn btn--blue">
+        Отправить отклик
+        <span><svg>
+                <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+            </svg></span>
+    </button>
+
+</form>

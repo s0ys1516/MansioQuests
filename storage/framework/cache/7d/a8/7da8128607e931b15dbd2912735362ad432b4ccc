@@ -1,0 +1,126 @@
+1646825695a:1:{s:24:"elements/action-call.htm";a:5:{s:8:"fileName";s:24:"elements/action-call.htm";s:7:"content";s:2251:"<div class="action-call">
+
+  {% partial 'elements/brand-flag' %}
+
+  <div class="action-call__inner">
+    {% if person %}
+
+    {% partial 'elements/person'
+    personName="{{ personName }}"
+    personEmployee="{{ personEmployee }}"
+    imgSrc="{{ imgSrc }}"
+    imgWidth="{{ imgWidth }}" %}
+    @@include('../person/person.html', {
+      "actionCall": true,
+      "person": {
+        "name": "@@person.name",
+        "employee": "@@person.employee",
+        "imgSrc": "@@person.imgSrc",
+        "imgWidth": "@@person.imgWidth"}})}
+
+    <div class="action-call__right-col">
+      <!-- <span class="contacts-form__subject">Форма заявки</span> -->
+      <div class="contacts-form__title">@@title</div>
+
+      @@if (context.dsc) {<p class="action-call__dsc">@@dsc</p>}
+
+      @@if (!(context.dsc)) {
+        <ul class="contacts-form__list">
+          <li>
+            Определите назначение дома
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Выберите архитектурный стиль
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Определите желаемую площадь дома
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Посмотрите образцы материалов
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Получите полную техническую консультацию
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+        </ul>
+      }
+
+      <div class="action-call__form-wrap  @@if (context.person) {action-call__form-wrap--fit}">
+        @@if (context.external) {@@external}
+
+        @@if (!context.external) {
+          @@include('../contacts/contacts-form/contacts-form.html', {
+          "btnText": "@@btnText"
+          })
+        }
+      </div>
+    </div>
+  </div>
+</div>
+";s:5:"mtime";i:1645713619;s:6:"markup";s:2250:"<div class="action-call">
+
+  {% partial 'elements/brand-flag' %}
+
+  <div class="action-call__inner">
+    {% if person %}
+
+    {% partial 'elements/person'
+    personName="{{ personName }}"
+    personEmployee="{{ personEmployee }}"
+    imgSrc="{{ imgSrc }}"
+    imgWidth="{{ imgWidth }}" %}
+    @@include('../person/person.html', {
+      "actionCall": true,
+      "person": {
+        "name": "@@person.name",
+        "employee": "@@person.employee",
+        "imgSrc": "@@person.imgSrc",
+        "imgWidth": "@@person.imgWidth"}})}
+
+    <div class="action-call__right-col">
+      <!-- <span class="contacts-form__subject">Форма заявки</span> -->
+      <div class="contacts-form__title">@@title</div>
+
+      @@if (context.dsc) {<p class="action-call__dsc">@@dsc</p>}
+
+      @@if (!(context.dsc)) {
+        <ul class="contacts-form__list">
+          <li>
+            Определите назначение дома
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Выберите архитектурный стиль
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Определите желаемую площадь дома
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Посмотрите образцы материалов
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+          <li>
+            Получите полную техническую консультацию
+            <svg><use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use></svg>
+          </li>
+        </ul>
+      }
+
+      <div class="action-call__form-wrap  @@if (context.person) {action-call__form-wrap--fit}">
+        @@if (context.external) {@@external}
+
+        @@if (!context.external) {
+          @@include('../contacts/contacts-form/contacts-form.html', {
+          "btnText": "@@btnText"
+          })
+        }
+      </div>
+    </div>
+  </div>
+</div>";s:4:"code";N;}}

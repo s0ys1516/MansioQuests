@@ -1,0 +1,757 @@
+description = "Home page layout"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+	<head>
+		{% partial 'global/meta' %}
+	</head>
+
+	<body id="pageBody">
+		<div id="siteWrapper" class="wrapper">
+			<!-- Header -->
+			{% partial 'global/header' %}
+			<!-- Content -->
+			<main id="pageMain">
+				{% partial 'sections/intro' %}
+				{% partial 'sections/we-do' headline='Проектируем и строим' %}
+				<section class="approach">
+					<div class="container">
+						<div class="approach__inner">
+							<!-- <div class="approach__nav">
+						        @@include('../btn/btn.html', {
+						        "text": "Смотреть все проекты",
+						        "mod": "blue",
+						        "href": "/projects.html"
+						        })
+						        <span>или</span>
+						        <a class="approach__link">
+						          <svg>
+						            <use xlink:href="{{ 'assets/images/sprite_auto.svg#pdf'|theme }}"></use>
+						          </svg>
+						          Скачать презентацию
+						        </a>
+						      </div> -->
+							<div class="approach__content">
+								<div class="approach__foto">
+									<picture>
+										<source
+											srcset="data:image/gif;base64,R0lGODlhOQBGAIAAAP///wAAACH5BAEAAAEALAAAAAA5AEYAAAJDjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt1xnAQA7"
+											data-srcset="{{ 'assets/images/person/Generalniy_direktor_dmitriy_alimov-main.webp'|theme }} 1x"
+											type="image/webp" />
+										<img
+											class="lazy"
+											src="data:image/gif;base64,R0lGODlhOQBGAIAAAP///wAAACH5BAEAAAEALAAAAAA5AEYAAAJDjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt1xnAQA7"
+											data-src="{{ 'assets/images/person/Generalniy_direktor_dmitriy_alimov-main.png'|theme }}"
+											width="570"
+											alt="Генеральный директор MANSIO GROUP Дмитрий Алимов"
+											loading="lazy" />
+									</picture>
+								</div>
+
+								<div class="approach__text">{% placeholder approachMain title="MANSIO сервис" %}</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="product">
+					<div class="container">
+						<div class="headline">
+							<h2 class="headline__title">В&nbsp;вашем доме будет <span>тепло, комфортно и&nbsp;безопасно</span></h2>
+						</div>
+					</div>
+					<div class="container container--xxl">
+						<div class="product__inner">
+							<nav class="product__nav">
+								<button class="product__btn product__btn--active" data-product="tab1" type="button">
+									Керамический кирпич
+								</button>
+								<button class="product__btn" data-product="tab2" type="button">Газобетонный блок</button>
+								<button class="product__btn" data-product="tab3" type="button">Кирпич</button>
+								<button class="product__btn" data-product="tab4" type="button">Монолитные конструкции</button>
+							</nav>
+
+							<div class="product__content product__content--active" data-product="tab1">
+								<div class="product__text">
+									{% placeholder productTabDsc1 title="Описание первого таба" %}
+									<a class="btn  btn--blue" href="{{ 'stroitelstvo-iz-kirpicha'|staticPage }}"
+										>Подробнее о материалах и технологиях</a
+									>
+								</div>
+
+								<picture class="product__picture">
+									<source
+										srcset="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}}"
+										data-srcset="{{'assets/images/content/Teplaya-keramika.webp'|theme}} 1x"
+										type="image/webp" />
+									<img
+										class="lazy"
+										src="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}}"
+										data-src="{{'assets/images/content/Teplaya-keramika.jpg'|theme}}"
+										width="464"
+										alt="Тёплая керамика MANSIO GROUP" />
+								</picture>
+
+								<dl class="product__description-list">
+									<div class="product__list-item">
+										<dt class="product__subtitle">Зимой тепло, летом свежо</dt>
+										<dd>За счет пустот, которые образуют воздушную подушку.</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Стены «дышат»</dt>
+										<dd>
+											Керамоблоки изготовлены из глины - пористого природного материала, который не препятствует
+											воздухообмену.
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Стойкость</dt>
+										<dd>Срок службы дома более 100 лет по заключению ЦНИИСК им. В.А. Кучеренко.</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Любая архитектура</dt>
+										<dd>За счет малого веса и малой нагрузки на фундамент.</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Прочность</dt>
+										<dd>
+											Материал не задерживает влагу, поэтому не теряет несущей способности ни через 10, ни через 50, ни
+											через 100 лет.
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="product__content" data-product="tab2">
+								<div class="product__text">
+									{% placeholder productTabDsc2 title="Описание второго таба" %}
+									<a class="btn  btn--blue" href="{{ 'stroitelstvo-iz-gazobloka'|staticPage }}"
+										>Подробнее о материалах и технологиях</a
+									>
+								</div>
+
+								<picture class="product__picture">
+									<source
+										srcset="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}}"
+										data-srcset="{{'assets/images/content/Gazobeton.webp'|theme}} 1x"
+										type="image/webp" />
+									<img
+										class="lazy"
+										src="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}}"
+										data-src="{{ 'assets/images/content/Gazobeton.jpg'|theme }}"
+										width="464"
+										alt="Укладка керрамического кирпича"
+										loading="lazy" />
+								</picture>
+
+								<dl class="product__description-list">
+									<div class="product__list-item">
+										<dt class="product__subtitle">Энергоэффективность</dt>
+										<dd>Вы экономите на отоплении зимой, а летом сохраняется приятная прохлада</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Огнестойкость</dt>
+										<dd>
+											В составе газобетона только минеральные компоненты. Он не горит и не выделяет вредные для здоровья
+											вещества
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Высокая прочность</dt>
+										<dd>Высокая несущая способность благодаря автоклавной обработке</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Экологичность</dt>
+										<dd>
+											Газобетонный блок YTONG состоит исключительно из натуральных компонентов, что обеспечивает
+											полезный микроклимат внутри дома
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="product__content" data-product="tab3">
+								<div class="product__text">
+									{% placeholder productTabDsc3 title="Описание третьего таба" %}
+									<a class="btn  btn--blue" href="{{ 'stroitelstvo-iz-kirpicha'|staticPage }}"
+										>Подробнее о материалах и технологиях</a
+									>
+								</div>
+
+								<picture class="product__picture">
+									<source
+										srcset="data:image/gif;base64,R0lGODlhAgADAIAAAP///wAAACH5BAEAAAEALAAAAAACAAMAAAICjF8AOw=="
+										data-srcset="{{'assets/images/content/Kirpich.webp'|theme}} 1x"
+										type="image/webp" />
+									<img
+										class="lazy"
+										src="data:image/gif;base64,R0lGODlhAgADAIAAAP///wAAACH5BAEAAAEALAAAAAACAAMAAAICjF8AOw=="
+										data-src="{{ 'assets/images/content/Kirpich.jpg'|theme }}"
+										width="464"
+										alt="Укладка керрамического кирпича"
+										loading="lazy" />
+								</picture>
+
+								<dl class="product__description-list">
+									<div class="product__list-item">
+										<dt class="product__subtitle">Экологичность</dt>
+										<dd>
+											При изготовлении кирпича используются экологически чистые материалы, что обеспечивает полезный
+											микроклимат внутри дома
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Морозостойкость и&nbsp;прочность</dt>
+										<dd>
+											Благодаря низкой пористости материала, он&nbsp;прослужит 100+ лет даже в&nbsp;услових низких
+											температур
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Огнеупорность</dt>
+										<dd>
+											Устойчивость к воздействию высоких температур. Даже в условиях попадания прямого пламени кирпичный
+											дом не поддерживает процесс горения
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Шумоизоляция</dt>
+										<dd>
+											Кирпичные стены обеспечивают высокий уровень звукоизоляции как внешних перекрытий, так и
+											внутренних перегородок. Материал гасит практически все виды звуковой вибрации (воздушный,
+											акустический, структурный шум).
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="product__content" data-product="tab4">
+								<div class="product__text">
+									{% placeholder productTabDsc4 title="Описание четвертого таба" %}
+									<a class="btn  btn--blue" href="{{ 'stroitelstvo-monolitnoe'|staticPage }}"
+										>Подробнее о материалах и технологиях</a
+									>
+								</div>
+
+								<picture class="product__picture">
+									<source
+										srcset="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}} 1x"
+										data-srcset="{{'assets/images/content/Monolitnye-konstrukczii.webp'|theme}} 1x"
+										type="image/webp" />
+									<img
+										class="lazy"
+										src="{{'assets/images/placeholders/dummy-image-464x619.gif'|theme}}"
+										data-src="{{ 'assets/images/content/Monolitnye-konstrukczii.jpg'|theme }}"
+										width="464"
+										alt="Укладка керрамического кирпича"
+										loading="lazy" />
+								</picture>
+
+								<dl class="product__description-list">
+									<div class="product__list-item">
+										<dt class="product__subtitle">Прочность и сейсмоустойчивость</dt>
+										<dd>
+											В сейсмически опасных зонах железобетонные опоры являются обязательным условием строительства, так
+											как монолитный каркас способен выдержать большие нагрузки
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Пожаробезопасность</dt>
+										<dd>
+											Электрическая разводка прокладывается внутри опалубки перед заливкой, что способствует повышению
+											пожаробезопасности здания
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Универсальность</dt>
+										<dd>
+											Монолитное строительство значительно упрощает работу проектировщиков и позволяет дизайнерам
+											создавать интересные проекты интерьера и экстерьера
+										</dd>
+									</div>
+									<div class="product__list-item">
+										<dt class="product__subtitle">Долговечность</dt>
+										<dd>Монолитный дом прослужит от 150 лет</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="features">
+					<div class="container">
+						<div class="features__inner">
+							<blockquote class="features__blockquote">
+								<h2 class="features__title">
+									Каждый квадратный сантиметр вашего дома будет комфортным для вас и вашей семьи
+								</h2>
+								<cite class="features__blockquote-cite"
+									>Дмитрий Алимов<br />Генеральный директор {% partial 'elements/logo-brand' text='MANSIO GROUP'
+									%}</cite
+								>
+							</blockquote>
+							<div class="features__content">
+								<!-- item -->
+								<div class="features-item">
+									<div class="features-item__icon">
+										<svg>
+											<use xlink:href="{{ 'assets/images/sprite_auto.svg#features-icon-1'|theme }}"></use>
+										</svg>
+									</div>
+									<div class="features-item__title">ВНИМАНИЕ К ДЕТАЛЯМ</div>
+									<span
+										>Какие у вас хобби? Кем работаете? Как любите отдыхать? Чем увлекаются ваши дети? Команда
+										архитекторов стремится узнать каждую деталь вашего образа жизни, чтобы спроектировать дом, в котором
+										каждый м2 будет дарить комфорт</span
+									>
+								</div>
+								<!-- item -->
+								<div class="features-item">
+									<div class="features-item__icon">
+										<svg>
+											<use xlink:href="{{ 'assets/images/sprite_auto.svg#features-icon-2'|theme }}"></use>
+										</svg>
+									</div>
+									<div class="features-item__title">АБСОЛЮТНЫЙ КОМФОРТ</div>
+									<span
+										>Проектируем дома, в которых не возникнет вопросов: «Где разместить друзей?», «Куда складывать
+										игрушки?», «Где будет спать любимый питомец?» Благодаря многолетнему опыту мы знаем, на что обратить
+										внимание, чтобы продумать всё до мелочей. Мелочей, из которых и складывается гармония в доме.</span
+									>
+								</div>
+								<!-- item -->
+								<div class="features-item">
+									<div class="features-item__icon">
+										<svg>
+											<use xlink:href="{{ 'assets/images/sprite_auto.svg#features-icon-3'|theme }}"></use>
+										</svg>
+									</div>
+									<div class="features-item__title">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</div>
+									<span
+										>При проектировании инженерных систем учитываем соответствующие нормы и правила, обеспечивая
+										надежность и безопасность эксплуатации. При реализации инженерного проекта ориентируемся на будущий
+										дизайн помещений. Используем современные технологии, в том числе системы «Умного дома».</span
+									>
+								</div>
+								<!-- item -->
+								<div class="features-item">
+									<div class="features-item__icon">
+										<svg>
+											<use xlink:href="{{ 'assets/images/sprite_auto.svg#features-icon-4'|theme }}"></use>
+										</svg>
+									</div>
+									<div class="features-item__title">ИНДИВИДУАЛЬНОСТЬ</div>
+									<span
+										>Благодаря дизайнерам MANSIO дом станет отражением вашего характера и стиля жизни. Словно отпечатки
+										пальцев, он будет олицетворять именно вас, ваш стиль, ваше настроение. Вы уникальны, и мы перенесем
+										эту уникальность в ваш проект.</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="contacts" style="margin-top:0;">
+					<h2 class="visually-hidden">Организация встречи с нашим архитектором</h2>
+					<div class="contacts__bg">
+						<div class="container">
+							<div class="contacts__window">
+								<div class="action-call">
+									<div class="brand-flag">
+										<svg class="brand-flag__logo" width="103" height="16">
+											<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+										</svg>
+									</div>
+									<div class="action-call__inner">
+										<div class="person  action-call__person">
+											<div class="person__name-wrap">
+												<p class="person__name">Илларионов Илья Николаевич</p>
+												<p class="person__sub-name">Главный архитектор</p>
+											</div>
+											<div class="person__foto-wrap action-call__person-foto">
+												<picture>
+													<source
+														srcset="{{ 'assets/images/placeholders/dummy-image-651x799.gif'|theme }}"
+														data-srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x"
+														type="image/webp" />
+													<img
+														class="lazy"
+														src="{{ 'assets/images/placeholders/dummy-image-651x799.gif'|theme }}"
+														data-src="{{ 'assets/images/content/manager.png'|theme }}"
+														alt="Фотография Главный архитектор Илларионов Илья Николаевич"
+														width="651"
+														loading="lazy" />
+												</picture>
+											</div>
+										</div>
+										<div class="action-call__right-col">
+											<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+											<div class="contacts-form__title">
+												Организуем встречу с&nbsp;нашим<br />архитектором, на которой&nbsp;вы<span>:</span>
+											</div>
+											<ul class="contacts-form__list">
+												<li>
+													Определите назначение дома
+													<svg>
+														<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+													</svg>
+												</li>
+												<li>
+													Выберите архитектурный стиль
+													<svg>
+														<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+													</svg>
+												</li>
+												<li>
+													Определите желаемую площадь дома
+													<svg>
+														<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+													</svg>
+												</li>
+												<li>
+													Посмотрите образцы материалов
+													<svg>
+														<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+													</svg>
+												</li>
+												<li>
+													Получите полную техническую консультацию
+													<svg>
+														<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+													</svg>
+												</li>
+											</ul>
+											<div class="action-call__form-wrap  action-call__form-wrap--fit">
+												<script>
+													!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "823744", hash: "3e5bddc0ee041117a0393f68b52f5c00", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");
+												</script>
+												<script
+													id="amoforms_script_823744"
+													async="async"
+													charset="utf-8"
+													src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1640586666"></script>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="services  services--main">
+					<h2 class="visually-hidden">Перечень услуг MANSIO GROUP</h2>
+					<div class="services__item">
+						<div class="services__foto services__foto--right">
+							<picture class="js-picture">
+								<source
+									srcset="{{ 'assets/images/placeholders/dummy-image-875x633.gif'|theme }} 1x"
+									data-srcset="{{ 'assets/images/content/layer-26.webp'|theme }} 1x"
+									type="image/webp" />
+								<img
+									class="lazy js-picture__img js-picture__img--mid-scroll"
+									src="{{ 'assets/images/placeholders/dummy-image-875x633.gif'|theme }}"
+									data-src="{{ 'assets/images/content/layer-26.jpg'|theme }}"
+									alt="Фотография специалистов MANSIO GROUP"
+									width="875" />
+							</picture>
+						</div>
+						<div class="services__content">
+							<div class="services__title">
+								Под ваш проект <br />
+								создается проектная группа <br />
+								из&nbsp;специалистов:
+							</div>
+							<ul class="services__list">
+								<li>Архитекторы;</li>
+								<li>Конструкторы;</li>
+								<li>Инженеры;</li>
+								<li>Дизайнеры;</li>
+								<li>Ландшафтные дизайнеры;</li>
+								<li>Комплектовщики.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- item 9 -->
+					<div class="services__item">
+						<div class="services__foto">
+							<picture class="js-picture">
+								<source
+									srcset="data:image/gif;base64,R0lGODlhBwAEAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAQAAAIEjI+pWwA7"
+									data-srcset="{{ 'assets/images/content/layer-27.webp'|theme }} 1x"
+									type="image/webp" />
+								<img
+									class="lazy js-picture__img js-picture__img--mid-scroll"
+									src="data:image/gif;base64,R0lGODlhBwAEAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAQAAAIEjI+pWwA7"
+									data-src="{{ 'assets/images/content/layer-27.jpg'|theme }}"
+									alt="Фотография специалистов MANSIO GROUP"
+									width="837" />
+							</picture>
+						</div>
+						<div class="services__content">
+							<div class="services__desc">Для обсуждения деталей вашего проекта</div>
+							<div class="services__title">
+								Создаем общий чат <br />
+								в&nbsp;удобном мессенджере
+							</div>
+							<div class="services__subtitle">В&nbsp;режиме реального времени вы&nbsp;сможете увидеть:</div>
+							<ul class="services__list">
+								<li>Эскизы;</li>
+								<li>Наброски;</li>
+								<li>Технические решения;</li>
+							</ul>
+							<div class="services__feedback">
+								<div class="services__icon">
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#project-icon-1'|theme }}"></use>
+									</svg>
+								</div>
+								<span>Специалисты готовы ответить на&nbsp;любой ваш вопрос в&nbsp;режиме реального времени.</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			{% partial 'global/footer' %}
+		</div>
+
+		{# modals #}
+		<div class="modal modal--preload modal--discuss  modal--responsive    ">
+			<div class="modal__wrapper">
+				<div class="modal__overlay"></div>
+				<div class="modal__content">
+					<div class="action-call">
+						<div class="brand-flag">
+							<svg class="brand-flag__logo" width="103" height="16">
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme}}"></use>
+							</svg>
+						</div>
+						<div class="action-call__inner">
+							<div class="person  action-call__person">
+								<div class="person__name-wrap">
+									<p class="person__name">Илларионов Илья Николаевич</p>
+									<p class="person__sub-name">Главный архитектор</p>
+								</div>
+								<div class="person__foto-wrap action-call__person-foto">
+									<picture>
+										<source
+											srcset="{{ 'assets/images/placeholders/dummy-image-651x799.gif'|theme }}"
+											data-srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x"
+											type="image/webp" />
+										<img
+											class="lazy"
+											src="{{ 'assets/images/placeholders/dummy-image-651x799.gif'|theme }}"
+											data-src="{{ 'assets/images/content/manager.png'|theme }}"
+											alt="Фотография Главный архитектор Илларионов Илья Николаевич"
+											width="651"
+											loading="lazy" />
+									</picture>
+								</div>
+							</div>
+							<div class="action-call__right-col">
+								<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+								<div class="contacts-form__title">Запишитесь на&nbsp;встречу<br />с&nbsp;архитектором Mansio Group</div>
+								<p class="action-call__dsc">
+									Наш архитектор выслушает ваши пожелания, даст рекомендации и&nbsp;ответит на&nbsp;все вопросы
+								</p>
+								<div class="action-call__form-wrap  action-call__form-wrap--fit">
+									<script>
+										! function (a, m, o, c, r, m) {
+											a[o + c] = a[o + c] || {
+												setMeta: function (p) {
+													this.params = (this.params || []).concat([p])
+												}
+											}, a[o + r] = a[o + r] || function (f) {
+												a[o + r].f = (a[o + r].f || []).concat([f])
+											}, a[o + r]({
+												id: "841105",
+												hash: "7996435f3912dc70d4a8cb313cf6b826",
+												locale: "ru"
+											})
+										}(window, 0, "amo_forms_", "params", "load");
+									</script>
+									<script
+										id="amoforms_script_841105"
+										async="async"
+										charset="utf-8"
+										src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1632903968"></script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- TODO: стилизовать -->
+					<button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+						<svg width="15" height="15">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#icon-close'|theme}}"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--preload modal--registration-for-viewing  modal--responsive    ">
+			<div class="modal__wrapper">
+				<div class="modal__overlay"></div>
+				<div class="modal__content">
+					<div class="action-call">
+						<div class="brand-flag">
+							<svg class="brand-flag__logo" width="103" height="16">
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme}}"></use>
+							</svg>
+						</div>
+						<div class="action-call__inner">
+							<div class="person  action-call__person">
+								<div class="person__name-wrap">
+									<p class="person__name">Александра Бикова</p>
+									<p class="person__sub-name">Проектный консультант</p>
+								</div>
+								<div class="person__foto-wrap action-call__person-foto">
+									<picture>
+										<source srcset="{{ 'assets/images/content/manager-w.webp'|theme }} 1x" type="image/webp" />
+										<img
+											src="{{ 'assets/images/content/manager-w.png'|theme }}"
+											width="704"
+											alt="Фотография Проектный консультант Александра Бикова" />
+									</picture>
+								</div>
+							</div>
+							<div class="action-call__right-col">
+								<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+								<div class="contacts-form__title">
+									Запись на&nbsp;просмотр строящихся<br />или готовых домов Mansio Group
+								</div>
+								<p class="action-call__dsc">
+									Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведем экскурсию по&nbsp;нашим объекта
+								</p>
+								<div class="action-call__form-wrap  action-call__form-wrap--fit">
+									<script>
+										!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"823750",hash:"e76b0394838a458bc0c9c429b22b83e2",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");
+									</script>
+									<script
+										id="amoforms_script_823750"
+										async="async"
+										charset="utf-8"
+										src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1643030013"></script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- TODO: стилизовать -->
+					<button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+						<svg width="15" height="15">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#icon-close'|theme}}"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--preload modal--already-have   modal--fit-content   ">
+			<div class="modal__wrapper">
+				<div class="modal__overlay"></div>
+				<div class="modal__content">
+					<div class="action-call">
+						<div class="brand-flag">
+							<svg class="brand-flag__logo" width="103" height="16">
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme}}"></use>
+							</svg>
+						</div>
+						<div class="action-call__inner">
+							<div class="action-call__right-col">
+								<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+								<div class="contacts-form__title">У&nbsp;вас есть готовый проект?<br />Присылайте нам его.</div>
+								<p class="action-call__dsc">
+									Проведем тщательную экспертизу, рассчитаем точную смету и&nbsp;сроки строительства
+								</p>
+								<div class="action-call__form-wrap  ">
+									<script>
+										! function (a, m, o, c, r, m) {
+											a[o + c] = a[o + c] || {
+												setMeta: function (p) {
+													this.params = (this.params || []).concat([p])
+												}
+											}, a[o + r] = a[o + r] || function (f) {
+												a[o + r].f = (a[o + r].f || []).concat([f])
+											}, a[o + r]({
+												id: "824437",
+												hash: "bc1d3d7136b6a981ba531b07a2f4df4f",
+												locale: "ru"
+											})
+										}(window, 0, "amo_forms_", "params", "load");
+									</script>
+									<script
+										id="amoforms_script_824437"
+										async="async"
+										charset="utf-8"
+										src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629710154"></script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- TODO: стилизовать -->
+					<button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+						<svg width="15" height="15">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#icon-close'|theme}}"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--preload modal--back-call   modal--fit-content   ">
+			<div class="modal__wrapper">
+				<div class="modal__overlay"></div>
+				<div class="modal__content">
+					<div class="action-call">
+						<div class="brand-flag">
+							<svg class="brand-flag__logo" width="103" height="16">
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme}}"></use>
+							</svg>
+						</div>
+						<div class="action-call__inner">
+							<div class="action-call__right-col">
+								<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+								<div class="contacts-form__title">Мы&nbsp;вам перезвоним</div>
+								<p class="action-call__dsc">
+									В&nbsp;ближайшее время с&nbsp;вами свяжется персональный менеджер и&nbsp;ответит на&nbsp;интересующие
+									вопросы
+								</p>
+								<div class="action-call__form-wrap  ">
+									<script>
+										! function (a, m, o, c, r, m) {
+											a[o + c] = a[o + c] || {
+												setMeta: function (p) {
+													this.params = (this.params || []).concat([p])
+												}
+											}, a[o + r] = a[o + r] || function (f) {
+												a[o + r].f = (a[o + r].f || []).concat([f])
+											}, a[o + r]({
+												id: "824308",
+												hash: "eb4c8a02bc8d0e34f40c0bf6717e14c2",
+												locale: "ru"
+											})
+										}(window, 0, "amo_forms_", "params", "load");
+									</script>
+									<script
+										id="amoforms_script_824308"
+										async="async"
+										charset="utf-8"
+										src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629695953"></script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- TODO: стилизовать -->
+					<button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+						<svg width="15" height="15">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#icon-close'|theme}}"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		{% partial 'global/scripts' %}
+	</body>
+</html>

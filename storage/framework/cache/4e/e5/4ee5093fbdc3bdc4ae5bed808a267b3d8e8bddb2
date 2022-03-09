@@ -1,0 +1,31 @@
+1646825695a:1:{s:30:"elements/call2action_about.htm";a:5:{s:8:"fileName";s:30:"elements/call2action_about.htm";s:7:"content";s:1009:"<div class="contacts-about">
+        <div class="contacts-about__content">
+          <h2 class="contacts-about__title">Узнайте больше о нашем подходе!</h2>
+          <a class="contacts-about__link" href="/about">
+            Перейти в раздел о нас
+            <svg>
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+            </svg>
+          </a>
+          <a class="btn  btn--white contacts-about__btn" data-modal="registration-for-viewing">Посетить готовые объекты и&nbsp;пообщаться с&nbsp;их&nbsp;владельцами</a>
+        </div>
+        <picture class="contacts-about__foto">
+          <source srcset="{{ 'assets/images/content/text-about.webp'|theme }} 1x" type="image/webp">
+          <img src="{{ 'assets/images/content/text-about.jpg'|theme }}" width="470" alt="Фотография счастливых клиентов" loading="lazy">
+        </picture>
+      </div>";s:5:"mtime";i:1645713619;s:6:"markup";s:1009:"<div class="contacts-about">
+        <div class="contacts-about__content">
+          <h2 class="contacts-about__title">Узнайте больше о нашем подходе!</h2>
+          <a class="contacts-about__link" href="/about">
+            Перейти в раздел о нас
+            <svg>
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+            </svg>
+          </a>
+          <a class="btn  btn--white contacts-about__btn" data-modal="registration-for-viewing">Посетить готовые объекты и&nbsp;пообщаться с&nbsp;их&nbsp;владельцами</a>
+        </div>
+        <picture class="contacts-about__foto">
+          <source srcset="{{ 'assets/images/content/text-about.webp'|theme }} 1x" type="image/webp">
+          <img src="{{ 'assets/images/content/text-about.jpg'|theme }}" width="470" alt="Фотография счастливых клиентов" loading="lazy">
+        </picture>
+      </div>";s:4:"code";N;}}

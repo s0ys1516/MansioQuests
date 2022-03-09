@@ -1,0 +1,33 @@
+1646825674a:1:{s:11:"spasibo.htm";a:10:{s:8:"fileName";s:11:"spasibo.htm";s:7:"content";s:1025:"title = "Спасибо"
+url = "/thankyou"
+layout = "default"
+meta_description = "Успешная заявка!"
+is_hidden = 0
+==
+<div class="first-screen  first-screen--thankyou">
+  <div class="container">
+    <div class="first-screen__inner">
+      <h1 class="first-screen__title">Спасибо за заявку!</h1>
+      <p>Наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время!</p>
+      <p>Если нет времени ждать, то&nbsp;позвоните нам по&nbsp;номеру: <a href='tel:+74951820242'>+7 (495)
+          182-02-42</a> или напишите в&nbsp;мессенджер: <a
+          href='https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20'
+          target="_blank">Whatsapp</a> или <a href='https://t.me/mansio_group' target="_blank">Telegram</a>
+      </p>
+      {% partial 'elements/btn' text='Вернуться на главную' href='/' %}
+    </div>
+  </div>
+</div>";s:5:"mtime";i:1645713619;s:6:"markup";s:894:"<div class="first-screen  first-screen--thankyou">
+  <div class="container">
+    <div class="first-screen__inner">
+      <h1 class="first-screen__title">Спасибо за заявку!</h1>
+      <p>Наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время!</p>
+      <p>Если нет времени ждать, то&nbsp;позвоните нам по&nbsp;номеру: <a href='tel:+74951820242'>+7 (495)
+          182-02-42</a> или напишите в&nbsp;мессенджер: <a
+          href='https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20'
+          target="_blank">Whatsapp</a> или <a href='https://t.me/mansio_group' target="_blank">Telegram</a>
+      </p>
+      {% partial 'elements/btn' text='Вернуться на главную' href='/' %}
+    </div>
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:14:"Спасибо";s:3:"url";s:9:"/thankyou";s:6:"layout";s:7:"default";s:16:"meta_description";s:30:"Успешная заявка!";s:9:"is_hidden";s:1:"0";}}

@@ -1,0 +1,41 @@
+columns:
+    title:
+        label: 'Название проекта'
+        type: text
+        searchable: true
+        sortable: true
+    type:
+        label: Тип
+        type: text
+        searchable: true
+        sortable: true
+    square:
+        label: Площадь
+        type: text
+    floors:
+        label: Этажи
+        type: number
+    bedrooms:
+        label: Спальни
+        type: number
+    bathrooms:
+        label: Санузлы
+        type: number
+    closet:
+        label: Гардеробные
+        type: number
+    balconies:
+        label: Балконы
+        type: number
+    pdf_href:
+        label: Презентация
+        type: text
+    price:
+        label: Стоимость
+        type: number
+    created_at:
+        label: Создано
+        type: datetime
+    updated_at:
+        label: Обновлено
+        type: datetime

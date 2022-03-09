@@ -1,0 +1,9 @@
+1646825674a:1:{s:16:"kreditovanie.htm";a:11:{s:8:"fileName";s:16:"kreditovanie.htm";s:7:"content";s:470:"title = "Вакансии"
+url = "/kreditovanie"
+layout = "default"
+meta_title = "Кредитование"
+meta_description = "Персональные финансовые предложения для клиентов MANSIO GROUP"
+is_hidden = 0
+==
+{% partial 'sections/first-screen' bgClass='kreditovanie' title='Кредитование' dsc='<p>Комфортные финансовые предложения для вашего будущего дома</p>' %}
+";s:5:"mtime";i:1645713619;s:6:"markup";s:217:"{% partial 'sections/first-screen' bgClass='kreditovanie' title='Кредитование' dsc='<p>Комфортные финансовые предложения для вашего будущего дома</p>' %}";s:4:"code";N;s:5:"title";s:16:"Вакансии";s:3:"url";s:13:"/kreditovanie";s:6:"layout";s:7:"default";s:10:"meta_title";s:24:"Кредитование";s:16:"meta_description";s:105:"Персональные финансовые предложения для клиентов MANSIO GROUP";s:9:"is_hidden";s:1:"0";}}

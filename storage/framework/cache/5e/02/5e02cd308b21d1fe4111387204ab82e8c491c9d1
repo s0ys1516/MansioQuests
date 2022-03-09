@@ -1,0 +1,925 @@
+1646825674a:1:{s:11:"project.htm";a:9:{s:8:"fileName";s:11:"project.htm";s:7:"content";s:18809:";;
+title = "Проект"
+url = "/project/:slug"
+layout = "default"
+is_hidden = 0
+
+==
+use Pandaprofit\Projects\Models\Project;
+function onStart(){
+$this->prepareVars();
+$this['project'] = Project::where('slug', '=', $this->param('slug'))->first();
+$this->page->meta_title = $this['project']->title;
+$this->page->meta_description = strip_tags($this['project']->description);
+}
+function onFilterProjects() { $this->prepareVars(); }
+function prepareVars() {
+$options = post('Filter', []);
+
+$this['projects'] = Project::listFrontEnd($options);
+
+$projects = Project::all();
+$types = [];
+
+foreach($projects as $project){
+$types[] = $project->type;
+}
+
+$types = array_unique($types);
+
+$this['types'] = $types;
+}
+==
+{##}
+{% if project %}
+<div class="first-screen {{'first-screen--' ~ project.slug }}" id="pageFirstScreen">
+	<div class="container">
+		<div class="first-screen__inner">
+			<h1 class="first-screen__title">{{ project.title }}</h1>
+		</div>
+	</div>
+</div>
+
+<section class="details">
+	<div class="container container--xxl">
+		{% partial 'elements/headline' text="Детали проекта" %}
+	</div>
+
+	<article class="project container container--xxl">
+		<div class="project__left-col">
+			<div class="project-gallery">
+				<picture class="project-gallery__main-picture-wrap">
+					<img class="project-gallery__main-picture" id="expandImg" src="{{ project.main_image.thumb(885,auto) }}"
+						alt="Главное изображение проекта" width="885" />
+				</picture>
+				<ul class="project-gallery__thumbnails">
+					{% for image in project.project_gallery %}
+					<li class="project-gallery__thumbnails-item">
+						<a href="{{ image.path }}" class="glightbox">
+							<img src="{{ image.thumb(210,auto) }}" alt="{{ image.description }}" width="200">
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="project__right-col">
+			<table class="project__table  datasheet">
+				<tbody class="datasheet__body">
+					<tr class="datasheet__row">
+						<th class="datasheet__th datasheet__th--blue">Название проекта:</th>
+						<td class="datasheet__td">
+							<h3 class="project__title">{{ project.title }}</h3>
+						</td>
+					</tr>
+					{% if project.square %}
+					<tr class="datasheet__row  datasheet__row--square">
+						<th class="
+                        datasheet__th
+                        datasheet__th--tablet-hide
+                        datasheet__th--blue
+                      ">Площадь проекта:</th>
+						<td class="
+                        datasheet__td
+                        datasheet__td--big
+                        datasheet__td--blue
+                      ">{{ project.square }}&nbsp;м2</td>
+					</tr>
+					{% endif %}
+					{% if project.material %}
+					<tr class="datasheet__row icon icon--wall">
+						<th class="datasheet__th">Материал стен:</th>
+						<td class="datasheet__td">{{ project.material }}</td>
+					</tr>
+					{% endif %}
+					{% if project.bedrooms %}
+					<tr class="datasheet__row icon icon--bed">
+						<th class="datasheet__th">Спальни:</th>
+						<td class="datasheet__td">{{ project.bedrooms }}</td>
+					</tr>
+					{% endif %}
+					{% if project.bathrooms %}
+					<tr class="datasheet__row icon icon--bathtub">
+						<th class="datasheet__th">Ванные:</th>
+						<td class="datasheet__td">{{ project.bathrooms }}</td>
+					</tr>
+					{% endif %}
+					{% if project.balconies %}
+					<tr class="datasheet__row icon icon--balcony">
+						<th class="datasheet__th">Балконы:</th>
+						<td class="datasheet__td">{{ project.balconies }}</td>
+					</tr>
+					{% endif %}
+					{% if project.closet %}
+					<tr class="datasheet__row icon icon--closet">
+						<th class="datasheet__th">Гардеробные:</th>
+						<td class="datasheet__td">{{ project.closet }}</td>
+					</tr>
+					{% endif %}
+					{% if project.description %}
+					<tr class="datasheet__row  datasheet__row--text-about">
+						<th class="
+                        datasheet__th
+                        datasheet__th--bold
+                        datasheet__th--blue
+                      ">О проекте:</th>
+						<td class="datasheet__td datasheet__td--text">{{ project.description|raw }}</td>
+					</tr>
+					{% endif %}
+					{% if project.type=='Авторский проект' %}
+					<tr class="datasheet__row">
+						<th class="datasheet__th  datasheet__th--bold  datasheet__th--blue">Автор проекта:</th>
+						<td class="datasheet__td project__author-row">
+							<div class="project__author-content author">
+								<picture class="author__picture-wrap">
+									<source srcset="{{ 'assets/images/content/girlcall.webp'|theme }} 1x,
+																	{{ 'assets/images/content/girlcall@2x.webp'|theme }} 2x"
+										type="image/webp">
+									<img class="author__img" src="{{ 'assets/images/content/girlcall.png'|theme }}"
+										srcset="{{ 'assets/images/content/girlcall@2x.png'|theme }} 2x" width="102"
+										alt="Архитектор команды MANSIO GROUP Полина Авсеева" />
+								</picture>
+								<div class="author__text-wrap">
+									<p class="author__name">Полина Авсеева</p>
+									<p class="author__employee">Должность: Архитектор</p>
+									<p class="author__experience">Опыт: 120 проектов</p>
+								</div>
+							</div>
+							{% if project.pdf_href %}
+							<a href="{{ project.pdf_href|media }}" class="btn  btn--blue  project__btn" download>Получить
+								презентацию</a>
+							{% endif %}
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if project.type!='Авторский проект' %}
+					{% if project.price %}
+					<tr class="datasheet__row  datasheet__row--title">
+						<th class="
+                        datasheet__th
+                        datasheet__th--bold
+                        datasheet__th--blue
+                      ">Стоимость проекта:
+						</th>
+						<td class="datasheet__td datasheet__td--big">от {{ project.price }}&nbsp;₽</td>
+					</tr>
+					{% endif %}
+					{% endif %}
+				</tbody>
+			</table>
+
+			{% if project.type!='Авторский проект' and project.pdf_href %}
+			<a href="{{ project.pdf_href|media }}" class="btn  btn--blue  project__btn" download>Получить презентацию</a>
+			{% endif %}
+		</div>
+	</article>
+</section>
+<section class="house-gallery">
+	<div class="container  container--xxl">
+		{% partial 'elements/headline' text="Рассмотрите проект внимательнее" %}
+
+		<div class="tabs">
+			<ul class="house-gallery__nav-list  tabs__list  nav nav-tabs" id="galleryNavTabsList" role="tablist">
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn  active" id="exterior-tab" type="button" role="tab" aria-controls="exterior"
+						aria-selected="true" data-bs-toggle="tab" data-bs-target="#exterior">Внешний вид</button>
+				</li>
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn" id="layouts-tab" type="button" role="tab" aria-controls="layouts"
+						aria-selected="false" data-bs-toggle="tab" data-bs-target="#layouts">Планировки</button>
+				</li>
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn" id="facades-tab" type="button" role="tab" aria-controls="facades"
+						aria-selected="false" data-bs-toggle="tab" data-bs-target="#facades">Фасады</button>
+				</li>
+			</ul>
+
+			<div class="house-gallery__content">
+
+				<section class="tabs__pane active" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; фотографии внешнего вида</h3>
+					<div class="house-gallery__section  house-gallery__section--full-size">
+						{% for image in project.project_gallery %}
+						<a href="{{ image.path }}" class="house-gallery__item glightbox  glightbox">
+							<img class="house-gallery__img" src="{{ image.thumb(885,auto) }}" alt="{{ image.description }}"
+								width="885">
+						</a>
+						{% endfor %}
+					</div>
+				</section>
+
+				<section class="tabs__pane" id="layouts" role="tabpanel" aria-labelledby="layouts-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; планы дома</h3>
+					<div class="house-gallery__section  house-gallery__section--one-row">
+						{% for image in project.project_planning %}
+						<figure class="house-gallery__figure">
+							<a href="{{ image.path }}" class="house-gallery__item glightbox">
+								<img src="{{ image.thumb(450,auto) }}" class="house-gallery__img" alt="{{ image.description }}"
+									width="450">
+							</a>
+							{% if image.title %}
+							<figcaption class="house-gallery__figcaption">{{ image.title }}</figcaption>
+							{% endif %}
+						</figure>
+						{% endfor %}
+					</div>
+				</section>
+
+				<section class="house-gallery__tabs-pane tabs__pane" id="facades" role="tabpanel" aria-labelledby="facades-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; фотографии фасадов дома</h3>
+					<div class="house-gallery__section  house-gallery__section--one-row">
+
+						{% for image in project.project_facades %}
+						<figure class="house-gallery__figure">
+							<a href="{{ image.path }}" class="house-gallery__item glightbox">
+								<img src="{{ image.thumb(450,auto) }}" class="house-gallery__img" alt="{{ image.description }}"
+									width="450">
+							</a>
+							{% if image.title %}
+							<figcaption class="house-gallery__figcaption">{{ image.title }}</figcaption>
+							{% endif %}
+						</figure>
+						{% endfor %}
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- <a class="download-link" href="##" download>
+            <svg width="48" height="55">
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#pdf'|theme }}"></use>
+            </svg>Скачать презентацию проекта
+          </a> -->
+
+	</div>
+</section>
+
+{% else %}
+<div class="first-screen {{'first-screen--' ~ project.slug }}" id="pageFirstScreen"
+	style="background-image: url('{{project.main_image.path}}');">
+	<div class="container">
+		<div class="first-screen__inner">
+			<h1 class="first-screen__title">Кажется проект потерялся</h1>
+			<p>Пожалуйста попробуйте повторить попытку позже или свяжитесь с нами сейчас.</p>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+
+<!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
+<!-- @@include('../components/row-form/row-form.html', {
+        "title": "Понравился проект или хотите его изменить, дополнить?",
+        "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
+        "buttonText": "Рассчитать стоимость"
+        }) -->
+
+<div class="filter">
+	<div class="filter__panel">
+		<div class="container">
+			<h2>Фильтр проектов</h2>
+			{{ form_ajax('onFilterProjects', { update: { 'sections/projects': '#partialProjects' } }) }}
+			<div id="projectsFilterContent" class="filter__content ui form">
+				<div class="field">
+					<label for="projectsFilterCategorySelect" class="form-label">Категории</label>
+					<select id="projectsFilterCategorySelect" class="form-select form-select-lg mb-3" name="Filter[type]">
+						<option value="">Выберите категорию</option>
+						{% for type in types|sort %}
+						<option value="{{type}}">{{ type }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			{{ form_close() }}
+		</div>
+	</div>
+</div>
+<section class="catalog" id="sectionCatalog">
+	<h2 class="visually-hidden">Другие проекты</h2>
+	<div id="partialProjects">
+		{% partial 'sections/projects' %}
+	</div>
+</section>
+{# <section class="catalog">
+	<div class="container container--xxl">
+		{% partial 'elements/headline' text="Посмотрите похожие проекты" %}
+
+		<ul class="catalog__list catalog__list--gap-solid">
+			{% set projects = projectList.projects %}
+			{% set displayColumn = projectList.displayColumn %}
+			{% set noprojectsMessage = projectList.noprojectsMessage %}
+			{% set detailsPage = projectList.detailsPage %}
+			{% set detailsKeyColumn = projectList.detailsKeyColumn %}
+			{% set detailsUrlParameter = projectList.detailsUrlParameter %}
+			{% for project in projects %}
+			<li class=" card  card--catalog catalog__item">
+				{% spaceless %}
+				{% if detailsPage %}
+				<a class="card__link-wrapper"
+					href="{{ detailsPage|page({ (detailsUrlParameter): attribute(project, detailsKeyColumn) }) }}">
+					{% endif %}
+
+					<div class="card__content">
+						<dl class="card__headline">
+							<dt class="card__title">{{ project.title }}</dt>
+							<dd class="card__subtitle">{{ project.type }} </dd>
+						</dl>
+					</div>
+
+					<div class="card__picture">
+						<img src="{{ project.main_image.thumb(950,auto) }}" alt="{{ project.main_image.title }}" width="950">
+					</div>
+
+				</a>
+				<div class="card__info-pane  card-pane">
+
+					<dl class="card-pane__name-wrapper">
+						<dt class="card__title  card-pane__title">{{ project.title }}</dt>
+						<dd class="card__subtitle  card-pane__subtitle">{{ project.type }}</dd>
+					</dl>
+
+					<dl class="card-pane__property-list">
+						<div class="card-pane__property">
+							<dt>Площадь:</dt>
+							<dd>{{ project.square }}&nbsp;м2</dd>
+						</div>
+						<div class="card-pane__property">
+							<dt>Этажность</dt>
+							<dd>{{ project.floors }}</dd>
+						</div>
+						<div class="card-pane__property  card-pane__property--label">
+							<dt>Материал</dt>
+							<dd>{{ project.material }}</dd>
+						</div>
+
+					</dl>
+					{% if detailsPage %}
+					<a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(project, detailsKeyColumn) }) }}"
+						class="btn  card-pane__btn">Открыть проект</a>
+				</div>
+				{% endif %}
+				{% endspaceless %}
+			</li>
+			{% else %}
+			<li class="no-data">{{ noprojectsMessage }}</li>
+			{% endfor %}
+		</ul>
+		{% if projects.lastPage > 1 %}
+		<ul class="pagination">
+			{% if projects.currentPage > 1 %}
+			<li><a href="{{ this.page.baseFileName|page({ (pageParam): (projects.currentPage-1) }) }}">&larr; Prev</a>
+			</li>
+			{% endif %}
+
+			{% for page in 1..projects.lastPage %}
+			<li class="{{ projects.currentPage == page ? 'active' : null }}">
+				<a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+			</li>
+			{% endfor %}
+
+			{% if projects.lastPage > projects.currentPage %}
+			<li><a href="{{ this.page.baseFileName|page({ (pageParam): (projects.currentPage+1) }) }}">Next &rarr;</a>
+			</li>
+			{% endif %}
+		</ul>
+		{% endif %}
+	</div>
+</section> #}
+<section class="contacts">
+	<div class="contacts__bg">
+		<div class="container">
+			<div class="contacts__window">
+				<div class="action-call">
+					<div class="brand-flag">
+						<svg class="brand-flag__logo" width="103" height="16">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+						</svg>
+					</div>
+					<div class="action-call__inner">
+						<div class="person  action-call__person">
+							<div class="person__name-wrap">
+								<p class="person__name animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Илларионов
+									Илья
+									Николаевич</p>
+								<p class="person__sub-name animated-text is-inview" data-scroll="" data-scroll-offset="50">Главный
+									архитектор</p>
+							</div>
+							<div class="person__foto-wrap action-call__person-foto">
+								<picture>
+									<source srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x" type="image/webp">
+									<img src="{{ 'assets/images/content/manager.png'|theme }}"
+										alt="Фотография Главный архитектор Илларионов Илья Николаевич" width="651">
+								</picture>
+							</div>
+						</div>
+						<div class="action-call__right-col">
+							<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+							<div class="contacts-form__title">Спроектируем ваш <br />индивидуальный дом</div>
+							<ul class="contacts-form__list">
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Определите назначение дома
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Выберите архитектурный стиль
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Определите желаемую площадь дома
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Посмотрите образцы материалов
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Получите полную техническую консультацию
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+							</ul>
+							<div class="action-call__form-wrap  action-call__form-wrap--fit">
+								<script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "823744", hash: "3e5bddc0ee041117a0393f68b52f5c00", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+								<script id="amoforms_script_823744" async="async" charset="utf-8"
+									src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1640586666"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% partial 'elements/call2action_about' %}
+
+		</div>
+	</div>
+</section>
+";s:5:"mtime";i:1646822374;s:6:"markup";s:18101:"{##}
+{% if project %}
+<div class="first-screen {{'first-screen--' ~ project.slug }}" id="pageFirstScreen">
+	<div class="container">
+		<div class="first-screen__inner">
+			<h1 class="first-screen__title">{{ project.title }}</h1>
+		</div>
+	</div>
+</div>
+
+<section class="details">
+	<div class="container container--xxl">
+		{% partial 'elements/headline' text="Детали проекта" %}
+	</div>
+
+	<article class="project container container--xxl">
+		<div class="project__left-col">
+			<div class="project-gallery">
+				<picture class="project-gallery__main-picture-wrap">
+					<img class="project-gallery__main-picture" id="expandImg" src="{{ project.main_image.thumb(885,auto) }}"
+						alt="Главное изображение проекта" width="885" />
+				</picture>
+				<ul class="project-gallery__thumbnails">
+					{% for image in project.project_gallery %}
+					<li class="project-gallery__thumbnails-item">
+						<a href="{{ image.path }}" class="glightbox">
+							<img src="{{ image.thumb(210,auto) }}" alt="{{ image.description }}" width="200">
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="project__right-col">
+			<table class="project__table  datasheet">
+				<tbody class="datasheet__body">
+					<tr class="datasheet__row">
+						<th class="datasheet__th datasheet__th--blue">Название проекта:</th>
+						<td class="datasheet__td">
+							<h3 class="project__title">{{ project.title }}</h3>
+						</td>
+					</tr>
+					{% if project.square %}
+					<tr class="datasheet__row  datasheet__row--square">
+						<th class="
+                        datasheet__th
+                        datasheet__th--tablet-hide
+                        datasheet__th--blue
+                      ">Площадь проекта:</th>
+						<td class="
+                        datasheet__td
+                        datasheet__td--big
+                        datasheet__td--blue
+                      ">{{ project.square }}&nbsp;м2</td>
+					</tr>
+					{% endif %}
+					{% if project.material %}
+					<tr class="datasheet__row icon icon--wall">
+						<th class="datasheet__th">Материал стен:</th>
+						<td class="datasheet__td">{{ project.material }}</td>
+					</tr>
+					{% endif %}
+					{% if project.bedrooms %}
+					<tr class="datasheet__row icon icon--bed">
+						<th class="datasheet__th">Спальни:</th>
+						<td class="datasheet__td">{{ project.bedrooms }}</td>
+					</tr>
+					{% endif %}
+					{% if project.bathrooms %}
+					<tr class="datasheet__row icon icon--bathtub">
+						<th class="datasheet__th">Ванные:</th>
+						<td class="datasheet__td">{{ project.bathrooms }}</td>
+					</tr>
+					{% endif %}
+					{% if project.balconies %}
+					<tr class="datasheet__row icon icon--balcony">
+						<th class="datasheet__th">Балконы:</th>
+						<td class="datasheet__td">{{ project.balconies }}</td>
+					</tr>
+					{% endif %}
+					{% if project.closet %}
+					<tr class="datasheet__row icon icon--closet">
+						<th class="datasheet__th">Гардеробные:</th>
+						<td class="datasheet__td">{{ project.closet }}</td>
+					</tr>
+					{% endif %}
+					{% if project.description %}
+					<tr class="datasheet__row  datasheet__row--text-about">
+						<th class="
+                        datasheet__th
+                        datasheet__th--bold
+                        datasheet__th--blue
+                      ">О проекте:</th>
+						<td class="datasheet__td datasheet__td--text">{{ project.description|raw }}</td>
+					</tr>
+					{% endif %}
+					{% if project.type=='Авторский проект' %}
+					<tr class="datasheet__row">
+						<th class="datasheet__th  datasheet__th--bold  datasheet__th--blue">Автор проекта:</th>
+						<td class="datasheet__td project__author-row">
+							<div class="project__author-content author">
+								<picture class="author__picture-wrap">
+									<source srcset="{{ 'assets/images/content/girlcall.webp'|theme }} 1x,
+																	{{ 'assets/images/content/girlcall@2x.webp'|theme }} 2x"
+										type="image/webp">
+									<img class="author__img" src="{{ 'assets/images/content/girlcall.png'|theme }}"
+										srcset="{{ 'assets/images/content/girlcall@2x.png'|theme }} 2x" width="102"
+										alt="Архитектор команды MANSIO GROUP Полина Авсеева" />
+								</picture>
+								<div class="author__text-wrap">
+									<p class="author__name">Полина Авсеева</p>
+									<p class="author__employee">Должность: Архитектор</p>
+									<p class="author__experience">Опыт: 120 проектов</p>
+								</div>
+							</div>
+							{% if project.pdf_href %}
+							<a href="{{ project.pdf_href|media }}" class="btn  btn--blue  project__btn" download>Получить
+								презентацию</a>
+							{% endif %}
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if project.type!='Авторский проект' %}
+					{% if project.price %}
+					<tr class="datasheet__row  datasheet__row--title">
+						<th class="
+                        datasheet__th
+                        datasheet__th--bold
+                        datasheet__th--blue
+                      ">Стоимость проекта:
+						</th>
+						<td class="datasheet__td datasheet__td--big">от {{ project.price }}&nbsp;₽</td>
+					</tr>
+					{% endif %}
+					{% endif %}
+				</tbody>
+			</table>
+
+			{% if project.type!='Авторский проект' and project.pdf_href %}
+			<a href="{{ project.pdf_href|media }}" class="btn  btn--blue  project__btn" download>Получить презентацию</a>
+			{% endif %}
+		</div>
+	</article>
+</section>
+<section class="house-gallery">
+	<div class="container  container--xxl">
+		{% partial 'elements/headline' text="Рассмотрите проект внимательнее" %}
+
+		<div class="tabs">
+			<ul class="house-gallery__nav-list  tabs__list  nav nav-tabs" id="galleryNavTabsList" role="tablist">
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn  active" id="exterior-tab" type="button" role="tab" aria-controls="exterior"
+						aria-selected="true" data-bs-toggle="tab" data-bs-target="#exterior">Внешний вид</button>
+				</li>
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn" id="layouts-tab" type="button" role="tab" aria-controls="layouts"
+						aria-selected="false" data-bs-toggle="tab" data-bs-target="#layouts">Планировки</button>
+				</li>
+				<li class="tabs__list-item" role="presentation">
+					<button class="tabs__btn" id="facades-tab" type="button" role="tab" aria-controls="facades"
+						aria-selected="false" data-bs-toggle="tab" data-bs-target="#facades">Фасады</button>
+				</li>
+			</ul>
+
+			<div class="house-gallery__content">
+
+				<section class="tabs__pane active" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; фотографии внешнего вида</h3>
+					<div class="house-gallery__section  house-gallery__section--full-size">
+						{% for image in project.project_gallery %}
+						<a href="{{ image.path }}" class="house-gallery__item glightbox  glightbox">
+							<img class="house-gallery__img" src="{{ image.thumb(885,auto) }}" alt="{{ image.description }}"
+								width="885">
+						</a>
+						{% endfor %}
+					</div>
+				</section>
+
+				<section class="tabs__pane" id="layouts" role="tabpanel" aria-labelledby="layouts-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; планы дома</h3>
+					<div class="house-gallery__section  house-gallery__section--one-row">
+						{% for image in project.project_planning %}
+						<figure class="house-gallery__figure">
+							<a href="{{ image.path }}" class="house-gallery__item glightbox">
+								<img src="{{ image.thumb(450,auto) }}" class="house-gallery__img" alt="{{ image.description }}"
+									width="450">
+							</a>
+							{% if image.title %}
+							<figcaption class="house-gallery__figcaption">{{ image.title }}</figcaption>
+							{% endif %}
+						</figure>
+						{% endfor %}
+					</div>
+				</section>
+
+				<section class="house-gallery__tabs-pane tabs__pane" id="facades" role="tabpanel" aria-labelledby="facades-tab">
+					<h3 class="visually-hidden">{{project.title}}&nbsp;&mdash; фотографии фасадов дома</h3>
+					<div class="house-gallery__section  house-gallery__section--one-row">
+
+						{% for image in project.project_facades %}
+						<figure class="house-gallery__figure">
+							<a href="{{ image.path }}" class="house-gallery__item glightbox">
+								<img src="{{ image.thumb(450,auto) }}" class="house-gallery__img" alt="{{ image.description }}"
+									width="450">
+							</a>
+							{% if image.title %}
+							<figcaption class="house-gallery__figcaption">{{ image.title }}</figcaption>
+							{% endif %}
+						</figure>
+						{% endfor %}
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- <a class="download-link" href="##" download>
+            <svg width="48" height="55">
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#pdf'|theme }}"></use>
+            </svg>Скачать презентацию проекта
+          </a> -->
+
+	</div>
+</section>
+
+{% else %}
+<div class="first-screen {{'first-screen--' ~ project.slug }}" id="pageFirstScreen"
+	style="background-image: url('{{project.main_image.path}}');">
+	<div class="container">
+		<div class="first-screen__inner">
+			<h1 class="first-screen__title">Кажется проект потерялся</h1>
+			<p>Пожалуйста попробуйте повторить попытку позже или свяжитесь с нами сейчас.</p>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+
+<!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
+<!-- @@include('../components/row-form/row-form.html', {
+        "title": "Понравился проект или хотите его изменить, дополнить?",
+        "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
+        "buttonText": "Рассчитать стоимость"
+        }) -->
+
+<div class="filter">
+	<div class="filter__panel">
+		<div class="container">
+			<h2>Фильтр проектов</h2>
+			{{ form_ajax('onFilterProjects', { update: { 'sections/projects': '#partialProjects' } }) }}
+			<div id="projectsFilterContent" class="filter__content ui form">
+				<div class="field">
+					<label for="projectsFilterCategorySelect" class="form-label">Категории</label>
+					<select id="projectsFilterCategorySelect" class="form-select form-select-lg mb-3" name="Filter[type]">
+						<option value="">Выберите категорию</option>
+						{% for type in types|sort %}
+						<option value="{{type}}">{{ type }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			{{ form_close() }}
+		</div>
+	</div>
+</div>
+<section class="catalog" id="sectionCatalog">
+	<h2 class="visually-hidden">Другие проекты</h2>
+	<div id="partialProjects">
+		{% partial 'sections/projects' %}
+	</div>
+</section>
+{# <section class="catalog">
+	<div class="container container--xxl">
+		{% partial 'elements/headline' text="Посмотрите похожие проекты" %}
+
+		<ul class="catalog__list catalog__list--gap-solid">
+			{% set projects = projectList.projects %}
+			{% set displayColumn = projectList.displayColumn %}
+			{% set noprojectsMessage = projectList.noprojectsMessage %}
+			{% set detailsPage = projectList.detailsPage %}
+			{% set detailsKeyColumn = projectList.detailsKeyColumn %}
+			{% set detailsUrlParameter = projectList.detailsUrlParameter %}
+			{% for project in projects %}
+			<li class=" card  card--catalog catalog__item">
+				{% spaceless %}
+				{% if detailsPage %}
+				<a class="card__link-wrapper"
+					href="{{ detailsPage|page({ (detailsUrlParameter): attribute(project, detailsKeyColumn) }) }}">
+					{% endif %}
+
+					<div class="card__content">
+						<dl class="card__headline">
+							<dt class="card__title">{{ project.title }}</dt>
+							<dd class="card__subtitle">{{ project.type }} </dd>
+						</dl>
+					</div>
+
+					<div class="card__picture">
+						<img src="{{ project.main_image.thumb(950,auto) }}" alt="{{ project.main_image.title }}" width="950">
+					</div>
+
+				</a>
+				<div class="card__info-pane  card-pane">
+
+					<dl class="card-pane__name-wrapper">
+						<dt class="card__title  card-pane__title">{{ project.title }}</dt>
+						<dd class="card__subtitle  card-pane__subtitle">{{ project.type }}</dd>
+					</dl>
+
+					<dl class="card-pane__property-list">
+						<div class="card-pane__property">
+							<dt>Площадь:</dt>
+							<dd>{{ project.square }}&nbsp;м2</dd>
+						</div>
+						<div class="card-pane__property">
+							<dt>Этажность</dt>
+							<dd>{{ project.floors }}</dd>
+						</div>
+						<div class="card-pane__property  card-pane__property--label">
+							<dt>Материал</dt>
+							<dd>{{ project.material }}</dd>
+						</div>
+
+					</dl>
+					{% if detailsPage %}
+					<a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(project, detailsKeyColumn) }) }}"
+						class="btn  card-pane__btn">Открыть проект</a>
+				</div>
+				{% endif %}
+				{% endspaceless %}
+			</li>
+			{% else %}
+			<li class="no-data">{{ noprojectsMessage }}</li>
+			{% endfor %}
+		</ul>
+		{% if projects.lastPage > 1 %}
+		<ul class="pagination">
+			{% if projects.currentPage > 1 %}
+			<li><a href="{{ this.page.baseFileName|page({ (pageParam): (projects.currentPage-1) }) }}">&larr; Prev</a>
+			</li>
+			{% endif %}
+
+			{% for page in 1..projects.lastPage %}
+			<li class="{{ projects.currentPage == page ? 'active' : null }}">
+				<a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+			</li>
+			{% endfor %}
+
+			{% if projects.lastPage > projects.currentPage %}
+			<li><a href="{{ this.page.baseFileName|page({ (pageParam): (projects.currentPage+1) }) }}">Next &rarr;</a>
+			</li>
+			{% endif %}
+		</ul>
+		{% endif %}
+	</div>
+</section> #}
+<section class="contacts">
+	<div class="contacts__bg">
+		<div class="container">
+			<div class="contacts__window">
+				<div class="action-call">
+					<div class="brand-flag">
+						<svg class="brand-flag__logo" width="103" height="16">
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+						</svg>
+					</div>
+					<div class="action-call__inner">
+						<div class="person  action-call__person">
+							<div class="person__name-wrap">
+								<p class="person__name animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Илларионов
+									Илья
+									Николаевич</p>
+								<p class="person__sub-name animated-text is-inview" data-scroll="" data-scroll-offset="50">Главный
+									архитектор</p>
+							</div>
+							<div class="person__foto-wrap action-call__person-foto">
+								<picture>
+									<source srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x" type="image/webp">
+									<img src="{{ 'assets/images/content/manager.png'|theme }}"
+										alt="Фотография Главный архитектор Илларионов Илья Николаевич" width="651">
+								</picture>
+							</div>
+						</div>
+						<div class="action-call__right-col">
+							<!-- <span class="contacts-form__subject">Форма заявки</span> -->
+							<div class="contacts-form__title">Спроектируем ваш <br />индивидуальный дом</div>
+							<ul class="contacts-form__list">
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Определите назначение дома
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Выберите архитектурный стиль
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Определите желаемую площадь дома
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Посмотрите образцы материалов
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+								<li class="animated-text is-inview" data-scroll="" data-scroll-offset="50">
+									Получите полную техническую консультацию
+									<svg>
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrow-right'|theme }}"></use>
+									</svg>
+								</li>
+							</ul>
+							<div class="action-call__form-wrap  action-call__form-wrap--fit">
+								<script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "823744", hash: "3e5bddc0ee041117a0393f68b52f5c00", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+								<script id="amoforms_script_823744" async="async" charset="utf-8"
+									src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1640586666"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% partial 'elements/call2action_about' %}
+
+		</div>
+	</div>
+</section>";s:4:"code";s:617:"use Pandaprofit\Projects\Models\Project;
+function onStart(){
+$this->prepareVars();
+$this['project'] = Project::where('slug', '=', $this->param('slug'))->first();
+$this->page->meta_title = $this['project']->title;
+$this->page->meta_description = strip_tags($this['project']->description);
+}
+function onFilterProjects() { $this->prepareVars(); }
+function prepareVars() {
+$options = post('Filter', []);
+
+$this['projects'] = Project::listFrontEnd($options);
+
+$projects = Project::all();
+$types = [];
+
+foreach($projects as $project){
+$types[] = $project->type;
+}
+
+$types = array_unique($types);
+
+$this['types'] = $types;
+}";s:5:"title";s:12:"Проект";s:3:"url";s:14:"/project/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

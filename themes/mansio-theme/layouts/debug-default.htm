@@ -1,0 +1,27 @@
+==
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+	{% partial 'global/meta' %}
+</head>
+
+<body id="pageBody">
+	<div id="siteWrapper" class="wrapper">
+		<!-- Header -->
+		{% partial 'global/header' %}
+
+		<!-- Content -->
+		<main id="pageMain">
+			{% page %}
+		</main>
+
+		<!-- Footer -->
+		{% partial 'global/footer' %}
+	</div>
+	<!-- Scripts -->
+	{% partial 'global/scripts' %}
+
+</body>
+
+</html>

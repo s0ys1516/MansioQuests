@@ -1,0 +1,119 @@
+1646825695a:1:{s:17:"sections/tech.htm";a:6:{s:8:"fileName";s:17:"sections/tech.htm";s:7:"content";s:3307:"[viewBag]
+==
+<section class="tech">
+  <h2 class="visually-hidden">Статьи о технологиях Mansio group</h2>
+  <ul class="tech__list">
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство из&nbsp;газоблока</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card.jpg'|theme }}" alt="Строительство из газоблока">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-iz-gazobloka'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство из&nbsp;кирпича</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-2.jpg'|theme }}" alt="Строительство из кирпича">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-iz-kirpicha'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство монолитное</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-3.jpg'|theme }}" alt="Строительство монолитное">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-monolitnoe'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Коммерческое строительство</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-4.jpg'|theme }}" alt="Коммерческое строительство">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'kommercheskoe-stroitelstvo'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Все о&nbsp;проектах и&nbsp;архитектуре</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-5.jpg'|theme }}" alt="Все о проектах и архитектуре">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'vse-o-proektah-i-arhitekture'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Описание этапов строительства</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-6.jpg'|theme }}" alt="Описание этапов строительства">
+        </picture>
+         <a class="btn  btn--white  article-card__btn" href="{{'etapy-stroitelstva-kamennogo-doma'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+  </ul>
+</section>";s:5:"mtime";i:1645713619;s:6:"markup";s:3294:"<section class="tech">
+  <h2 class="visually-hidden">Статьи о технологиях Mansio group</h2>
+  <ul class="tech__list">
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство из&nbsp;газоблока</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card.jpg'|theme }}" alt="Строительство из газоблока">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-iz-gazobloka'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство из&nbsp;кирпича</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-2.jpg'|theme }}" alt="Строительство из кирпича">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-iz-kirpicha'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Строительство монолитное</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-3.jpg'|theme }}" alt="Строительство монолитное">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'stroitelstvo-monolitnoe'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Коммерческое строительство</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-4.jpg'|theme }}" alt="Коммерческое строительство">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'kommercheskoe-stroitelstvo'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Все о&nbsp;проектах и&nbsp;архитектуре</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-5.jpg'|theme }}" alt="Все о проектах и архитектуре">
+        </picture>
+        <a class="btn  btn--white  article-card__btn" href="{{'vse-o-proektah-i-arhitekture'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+    <li class="tech__item">
+      <article class="article-card">
+        <h3 class="article-card__title">Описание этапов строительства</h3>
+        <picture class="article-card__picture">
+          <img src="{{ 'assets/images/tech-card-6.jpg'|theme }}" alt="Описание этапов строительства">
+        </picture>
+         <a class="btn  btn--white  article-card__btn" href="{{'etapy-stroitelstva-kamennogo-doma'|staticPage}}">Открыть страницу</a>
+      </article>
+    </li>
+  </ul>
+</section>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

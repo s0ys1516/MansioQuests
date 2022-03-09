@@ -1,0 +1,49 @@
+==
+{% if projects|length %}
+<ul class="catalog__list">
+  {% for project in projects %}
+  <li class="card card--catalog catalog__item">
+    <a class="card__link-wrapper" href="/project/{{project.slug}}">
+      <div class="card__content">
+        <dl class="card__headline">
+          <dt class="card__title">{{ project.title }}</dt>
+          <dd class="card__subtitle">{{ project.type }}</dd>
+        </dl>
+      </div>
+      <div class="card__picture">
+        <img
+          src="{{ project.main_image.thumb(950,auto) }}"
+          alt="{{ project.main_image.title }}"
+          width="950"
+        />
+      </div>
+    </a>
+    <div class="card__info-pane card-pane">
+      <dl class="card-pane__name-wrapper">
+        <dt class="card__title card-pane__title">{{ project.title }}</dt>
+        <dd class="card__subtitle card-pane__subtitle">{{ project.type }}</dd>
+      </dl>
+      <dl class="card-pane__property-list">
+        <div class="card-pane__property">
+          <dt>Площадь:</dt>
+          <dd>{{ project.square }}&nbsp;м2</dd>
+        </div>
+        <div class="card-pane__property">
+          <dt>Этажность</dt>
+          <dd>{{ project.floors }}</dd>
+        </div>
+        <div class="card-pane__property card-pane__property--label">
+          <dt>Материал</dt>
+          <dd>{{ project.material }}</dd>
+        </div>
+      </dl>
+      <a href="/project/{{project.slug}}" class="btn card-pane__btn"
+        >Открыть проект</a
+      >
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<h3>Проекты не найдены</h3>
+{% endif %}

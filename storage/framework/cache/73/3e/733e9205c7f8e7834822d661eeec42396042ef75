@@ -1,0 +1,61 @@
+1646825695a:1:{s:23:"sections/about-item.htm";a:6:{s:8:"fileName";s:23:"sections/about-item.htm";s:7:"content";s:710:"[viewBag]
+==
+{# 
+  params:
+  @title
+  @titleHide
+  @text
+  @img
+  @imgW
+  @imgAlt
+  #}
+<section class="about-item
+ {{ brand ? 'about-item--brand'}}
+ {{ invert ? 'about-item--invert'}}
+ {{ blue ? 'blue'}}
+ {{ pb0 ? 'about-item--md-pb-0' }}">
+  <div class="about-item__inner">
+    {% if brand %}
+    {% partial 'elements/brand-flag' %}
+    {% endif %}
+    
+    <div class="about-item__text">
+      {% if title %}
+        <h2 class="about-item__title  {{ titleHide ? 'visually-hidden'}}">{{ title|raw }}</h2>
+      {% endif %}
+      {{ text|raw }}
+    </div>
+    <div class="about-item__picture">
+      <img src="{{ img|theme }}" width="{{ imgW }}" alt="{{ imgAlt }}"loading="lazy">
+    </div>
+  </div>
+</section>";s:5:"mtime";i:1645713619;s:6:"markup";s:697:"{# 
+  params:
+  @title
+  @titleHide
+  @text
+  @img
+  @imgW
+  @imgAlt
+  #}
+<section class="about-item
+ {{ brand ? 'about-item--brand'}}
+ {{ invert ? 'about-item--invert'}}
+ {{ blue ? 'blue'}}
+ {{ pb0 ? 'about-item--md-pb-0' }}">
+  <div class="about-item__inner">
+    {% if brand %}
+    {% partial 'elements/brand-flag' %}
+    {% endif %}
+    
+    <div class="about-item__text">
+      {% if title %}
+        <h2 class="about-item__title  {{ titleHide ? 'visually-hidden'}}">{{ title|raw }}</h2>
+      {% endif %}
+      {{ text|raw }}
+    </div>
+    <div class="about-item__picture">
+      <img src="{{ img|theme }}" width="{{ imgW }}" alt="{{ imgAlt }}"loading="lazy">
+    </div>
+  </div>
+</section>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

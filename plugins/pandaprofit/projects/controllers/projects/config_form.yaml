@@ -1,0 +1,10 @@
+name: Projects
+form: $/pandaprofit/projects/models/project/fields.yaml
+modelClass: Pandaprofit\Projects\Models\Project
+defaultRedirect: pandaprofit/projects/projects
+create:
+    redirect: 'pandaprofit/projects/projects/update/:id'
+    redirectClose: pandaprofit/projects/projects
+update:
+    redirect: pandaprofit/projects/projects
+    redirectClose: pandaprofit/projects/projects

@@ -1,0 +1,81 @@
+1646825695a:1:{s:26:"elements/benefits-list.htm";a:5:{s:8:"fileName";s:26:"elements/benefits-list.htm";s:7:"content";s:1611:"<ul class="benefits-list">
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-1'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">11 лет в отрасли</div>
+    <div class="benefits-list__item-subtitle">Строим дома в Москве</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-2'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Контроль качества</div>
+    <div class="benefits-list__item-subtitle">Независимый технадзор</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-3'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Гарантия 15 лет</div>
+    <div class="benefits-list__item-subtitle">Установленная в договоре</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-4'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Поэтапная оплата</div>
+    <div class="benefits-list__item-subtitle">Прозрачная смета</div>
+  </li>
+</ul>";s:5:"mtime";i:1645713619;s:6:"markup";s:1611:"<ul class="benefits-list">
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-1'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">11 лет в отрасли</div>
+    <div class="benefits-list__item-subtitle">Строим дома в Москве</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-2'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Контроль качества</div>
+    <div class="benefits-list__item-subtitle">Независимый технадзор</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-3'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Гарантия 15 лет</div>
+    <div class="benefits-list__item-subtitle">Установленная в договоре</div>
+  </li>
+
+  <li class="benefits-list__item">
+    <div class="benefits-list__item-icon">
+      <svg width="51">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#intro-icon-4'|theme }}"></use>
+      </svg>
+    </div>
+    <div class="benefits-list__item-title">Поэтапная оплата</div>
+    <div class="benefits-list__item-subtitle">Прозрачная смета</div>
+  </li>
+</ul>";s:4:"code";N;}}

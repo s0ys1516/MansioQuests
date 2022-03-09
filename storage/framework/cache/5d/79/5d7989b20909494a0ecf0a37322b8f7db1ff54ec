@@ -1,0 +1,75 @@
+1646825674a:1:{s:26:"sections/contacts_info.htm";a:6:{s:8:"fileName";s:26:"sections/contacts_info.htm";s:7:"content";s:1910:"[viewBag]
+==
+<div class="info">
+   <div class="container">
+      <div class="info__inner">
+         <div class="info__desc">Реквизиты и карточка компании</div>
+         <div class="info__title">Для заказчиков и партнеров мы подготовили полную юридическую информацию о нашей компании</div>
+         <div class="info__content">
+            <div class="info__text">
+               <div class="info__logo">
+                  <svg>
+                     <use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+                  </svg>
+               </div>
+               <span>ООО «МАНСИО ГРУПП»</span>
+               <span>ИНН 7727435818</span>
+               <span>ОГРН 1197746734767</span>
+               <div class="info__address">Рублево-Успенское шоссе 1 км, д 6, офис 512</div>
+            </div>
+            <div class="info__download">
+               <div class="info__wrap">
+                  <span>Для удобства, <a class="js-no-smoothState" href="{{ 'assets/downloads/Mansio-Group_card.pdf'|theme}}" download="">скачайте</a> реквизиты одним файлом</span>
+                  <svg>
+                     <use xlink:href="{{ 'assets/images/sprite_auto.svg#pdf'|theme }}"></use>
+                  </svg>
+               </div>
+               <a class="info__btn  js-no-smoothState" href="{{ 'assets/downloads/Mansio-Group_card.pdf'|theme}}" download>
+                  СКАЧАТЬ РЕКВИЗИТЫ В PDF
+                  <span>
+                     <svg>
+                        <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+                     </svg>
+                  </span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>";s:5:"mtime";i:1645713619;s:6:"markup";s:1897:"<div class="info">
+   <div class="container">
+      <div class="info__inner">
+         <div class="info__desc">Реквизиты и карточка компании</div>
+         <div class="info__title">Для заказчиков и партнеров мы подготовили полную юридическую информацию о нашей компании</div>
+         <div class="info__content">
+            <div class="info__text">
+               <div class="info__logo">
+                  <svg>
+                     <use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+                  </svg>
+               </div>
+               <span>ООО «МАНСИО ГРУПП»</span>
+               <span>ИНН 7727435818</span>
+               <span>ОГРН 1197746734767</span>
+               <div class="info__address">Рублево-Успенское шоссе 1 км, д 6, офис 512</div>
+            </div>
+            <div class="info__download">
+               <div class="info__wrap">
+                  <span>Для удобства, <a class="js-no-smoothState" href="{{ 'assets/downloads/Mansio-Group_card.pdf'|theme}}" download="">скачайте</a> реквизиты одним файлом</span>
+                  <svg>
+                     <use xlink:href="{{ 'assets/images/sprite_auto.svg#pdf'|theme }}"></use>
+                  </svg>
+               </div>
+               <a class="info__btn  js-no-smoothState" href="{{ 'assets/downloads/Mansio-Group_card.pdf'|theme}}" download>
+                  СКАЧАТЬ РЕКВИЗИТЫ В PDF
+                  <span>
+                     <svg>
+                        <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+                     </svg>
+                  </span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

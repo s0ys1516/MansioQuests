@@ -1,0 +1,135 @@
+.features {
+  background-color: #f2f3f8;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  padding-top: 79px;
+  // padding-bottom: 75px;
+  padding-bottom: 290px;
+
+  @media (max-width: 991px) {
+    padding-top: 60px;
+    // padding-bottom: 0;
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 30px;
+  }
+
+  &__blockquote {
+    margin: 0;
+    padding: 38px 0;
+    margin-bottom: 80px;
+
+    @include viewport--xs {
+      padding: 0;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__blockquote-cite {
+    padding-top: 30px;
+    display: block;
+    text-align: right;
+    padding-right: 50px;
+
+    @include viewport--md {
+      padding-right: 20px;
+    }
+
+    @include viewport--xs {
+      padding-top: 20px;
+      padding-right: 0;
+      font-size: 13px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3.3rem;
+    color: $secondary-color;
+    text-transform: uppercase;
+    padding: 0;
+
+    padding-left: 100px;
+    border-left: 1px solid $secondary-color;
+
+    @include viewport--xs {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 88px;
+  }
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 84px 37px 20px 67px;
+  box-shadow: 0 15px 34px 0 rgba(124, 151, 170, 0.2);
+  background-color: #ffffff;
+
+  width: calc(50% - 15px);
+  min-height: 322px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #999999;
+    text-align: justify;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: $secondary-color;
+
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 97px;
+    height: 97px;
+    border-radius: 50%;
+    background-color: $primary-color;
+
+    position: absolute;
+    top: -62px;
+    left: 68px;
+
+    @media (max-width: 576px) {
+      left: 8px;
+    }
+
+    svg {
+      width: 46px;
+      height: 46px;
+      fill: $color-default-white;
+    }
+  }
+}

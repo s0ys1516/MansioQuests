@@ -1,0 +1,70 @@
+[viewBag]
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<section class="we-do" id="we-do">
+  {% if headline %}
+  <div class="container">
+    {% partial 'elements/headline' text=headline %}
+  </div>
+  {% endif %}
+  <div class="we-do__content">
+
+    <article class="we-do__item  we-do__item--bg-first">
+      <svg class="we-do__item-icon" width="55">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#typical-3'|theme }}"></use>
+      </svg>
+      <h3 class="we-do__item-title">Типовые проекты</h3>
+      <ul class="we-do__item-list">
+        <li>Приступаем к строительству сразу</li>
+        <li>Оптимизированный расход материалов</li>
+        <li>Стоимость м2 в типовых проектах ниже</li>
+      </ul>
+      <a class="we-do__item-link" href="/projects?category=%D0%A2%D0%B8%D0%BF%D0%BE%D0%B2%D0%BE%D0%B9+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82">
+        Подробнее
+        <svg width="12">
+          <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+        </svg>
+      </a>
+    </article>
+    <article class="we-do__item  we-do__item--bg-second">
+      <svg class="we-do__item-icon" width="55">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#author-3'|theme }}"></use>
+      </svg>
+      <h3 class="we-do__item-title">Авторские проекты</h3>
+      <ul class="we-do__item-list">
+        <li>Акцент на индивидуальность</li>
+        <li>Дома большой площади</li>
+        <li>Особенности пятна застройки</li>
+      </ul>
+      <a class="we-do__item-link" href="/projects?category=%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82">
+        Подробнее
+        <svg width="12">
+          <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+        </svg>
+      </a>
+    </article>
+
+    <article class="we-do__item  we-do__item--bg-third">
+      <svg class="we-do__item-icon" width="55">
+        <use xlink:href="{{ 'assets/images/sprite_auto.svg#commercial-3'|theme }}"></use>
+      </svg>
+      <h3 class="we-do__item-title">Коммерческие проекты</h3>
+      <ul class="we-do__item-list">
+        <li>Создание экономически выгодных проектов</li>
+        <li>Сооветствие вашему бюджету</li>
+        <li>Оперативное строительство</li>
+      </ul>
+      <a class="we-do__item-link" href="{{'/projects'|app}}">
+        Подробнее
+        <svg width="12">
+          <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+        </svg>
+      </a>
+    </article>
+
+  </div>
+</section>
+

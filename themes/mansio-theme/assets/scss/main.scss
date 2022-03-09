@@ -1,0 +1,156 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+// @import "../vendor/semantic-ui-css/semantic.min";
+// bootstrap minimum
+@import "../vendor/bootstrap/scss/functions";
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/scss/root";
+// bootstrap optional usage
+@import "../vendor/bootstrap/scss/_forms";
+
+
+@import "vendor/glightbox.min";
+@import "~locomotive-scroll/dist/locomotive-scroll";
+// js helpers
+@import "vendor/custom/locomotive";
+// @import "vendor/custom/loader";
+
+
+/* Glide.js
+	 ====================================== */
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// Optional Theme Stylesheet
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+// Модуль для тестирования, не должен быть в финальной версии и версии для клиента
+/* @import "vendor/test"; */
+
+// Global
+//---------------------------------
+@import "theme/boot";
+@import "theme/fonts";
+@import "theme/reboot";
+@import "theme/utils";
+@import "theme/webp";
+@import "theme/icon";
+@import "theme/up-button";
+// Modals and inner content
+@import "theme/modal";
+@import "elements/member";
+
+//
+@import "layouts/header";
+@import "elements/btn";
+@import "elements/socials";
+@import "sections/intro";
+@import "elements/benefits-list";
+@import "layouts/footer";
+@import "elements/headline";
+@import "sections/we-do";
+@import "sections/approach";
+@import "elements/tabs";
+@import "sections/product";
+@import "sections/features";
+@import "sections/contacts";
+@import "elements/brand-flag";
+@import "elements/action-call";
+@import "elements/person";
+@import "sections/services";
+// First screen inner page
+@import "sections/first-screen";
+// Catalog
+@import 'elements/.promo';
+@import 'elements/filter';
+@import "sections/cards-list";
+@import "elements/card";
+// Карточка проекта
+@import "elements/datasheet";
+@import "sections/project";
+@import "sections/house-gallery";
+// О нас
+@import "sections/about";
+@import "elements/row";
+@import "elements/vacancy-list";
+// Технологии
+@import "sections/tech";
+// Сетка контента статьи
+@import "layouts/article";
+// Контакты
+@import "sections/contacts_connection";
+@import "sections/contacts_info";
+@import "elements/map";
+
+@import "sections/division";
+
+// webp global
+// components
+
+/*
+@import "blocks/up-button";
+
+
+// ------- PAGES -------
+
+
+// contacts
+@import "../components/contacts/contacts";
+@import "../components/contacts/contacts-form/contacts-form";
+@import "../components/contacts/contacts-text/style.scss";
+
+
+// reviews
+@import "../components/reviews/style.scss";
+
+// reviews-slider
+@import "../components/reviews-slider/reviews-slider";
+@import "../components/reviews-slider/reviews-foto/reviews-foto";
+@import "../components/reviews-slider/reviews-panel/reviews-panel";
+
+// -- page-contacts --
+
+
+// connection
+@import "../components/connection/connection";
+@import "../components/members/style.scss";
+
+// info
+@import "../components/info/style.scss";
+
+// map
+@import "../components/map/map";
+
+// info-foto
+@import "../components/info-foto/style.scss";
+
+// --  page-project --
+
+// filter
+@import "../components/filter/filter";
+
+// form
+@import "../components/row-form/row-form";
+
+// contacts
+@import "../components/contacts/contacts-about/style.scss";
+
+
+
+
+
+// Страница о нас
+@import "../components/about/about";
+@import "../components/row-alert/row-alert";
+@import "../components/division/division";
+@import "../components/card/card";
+
+// Страница проекта
+@import "../components/project/project";
+@import "../components/house-gallery/house-gallery";
+@import "../components/project/project-benefits/project-benefits";
+@import "../components/project/project-about/project-about";
+ */

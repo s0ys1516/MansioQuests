@@ -1,0 +1,132 @@
+## START OFFLINE.ResponsiveImages - webp-rewrite
+#  DO NOT REMOVE THESE LINES
+<IfModule mod_setenvif.c>
+    # Vary: Accept for all the requests to jpeg and png
+    SetEnvIf Request_URI "\.(jpe?g|png)$" REQUEST_image
+</IfModule>
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+
+    # If the Browser supports WebP images, and the .webp file exists, use it.
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_URI} ^/?storage/.*\.(jpe?g|png)
+    RewriteCond %{REQUEST_FILENAME}.webp -f
+    RewriteRule ^/?(.*)$ $1.webp [NC,T=image/webp,END]
+
+    # If the Browser supports WebP images, and the .webp file does not exist, generate it.
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_URI} ^/?storage/.*\.(jpe?g|png)
+    RewriteCond %{REQUEST_FILENAME}\.webp !-f
+    RewriteRule ^/?(.*)$ plugins/offline/responsiveimages/webp.php?path=$1 [NC,END]
+</ifModule>
+<IfModule mod_headers.c>
+    Header append Vary Accept env=REQUEST_image
+</IfModule>
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>
+
+## END OFFLINE.ResponsiveImages - webp-rewrite
+
+
+
+<IfModule mod_rewrite.c>
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    ##
+    ## You may need to uncomment the following line for some hosting environments,
+    ## if you have installed to a subdirectory, enter the name here also.
+    ##
+    # RewriteBase /
+
+    ##
+    ## Uncomment following lines to force HTTPS.
+    ##
+    # RewriteCond %{HTTPS} off
+    # RewriteRule (.*) https://%{SERVER_NAME}/$1 [L,R=301]
+
+    ##
+    ## Paths explicitly blocked from being handled by the server
+    ##
+    RewriteRule ^bootstrap/.* index.php [L,NC]
+    RewriteRule ^config/.* index.php [L,NC]
+    RewriteRule ^vendor/.* index.php [L,NC]
+    RewriteRule ^storage/cms/.* index.php [L,NC]
+    RewriteRule ^storage/logs/.* index.php [L,NC]
+    RewriteRule ^storage/framework/.* index.php [L,NC]
+    RewriteRule ^storage/temp/protected/.* index.php [L,NC]
+    RewriteRule ^storage/app/uploads/protected/.* index.php [L,NC]
+
+    ##
+    ## Paths explicitly handled by the server
+    ##
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} !/.well-known/*
+    RewriteCond %{REQUEST_FILENAME} !/storage/app/uploads/public/.*
+    RewriteCond %{REQUEST_FILENAME} !/storage/app/media/.*
+    RewriteCond %{REQUEST_FILENAME} !/storage/app/resized/.*
+    RewriteCond %{REQUEST_FILENAME} !/storage/temp/public/.*
+    RewriteCond %{REQUEST_FILENAME} !/themes/.*/(assets|resources)/.*
+    RewriteCond %{REQUEST_FILENAME} !/plugins/.*/(assets|resources)/.*
+    RewriteCond %{REQUEST_FILENAME} !/modules/.*/(assets|resources)/.*
+    RewriteRule !^index.php index.php [L,NC]
+
+    ##
+    ## Block all PHP files, except index
+    ##
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} \.php$
+    RewriteRule !^index.php index.php [L,NC]
+
+    ##
+    ## Standard routes
+    ##
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+    RewriteRule ^index\.php$ http://mansio-group.ru/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^(.+)/$
+    RewriteRule ^(.+)/$ /$1 [R=301,L]
+    ##
+    ## Redirects / Редиректы 301
+    ##
+    Redirect 301 /index.html /
+    Redirect 301 /projects.html /projects
+    Redirect 301 /services.html /services
+    Redirect 301 /technology.html /technology
+    Redirect 301 /about.html /about
+    Redirect 301 /contacts.html /contacts
+    Redirect 301 /team.html /team
+    Redirect 301 /vacancy.html /vacancy
+    Redirect 301 /thankyou.html /thankyou
+    Redirect 301 /privacy.html /privacy
+    Redirect 301 /technology-stages-of-construction.html /etapy-stroitelstva-kamennogo-doma
+    Redirect 301 /technology-about-projects-and-architecture.html /vse-o-proektah-i-arhitekture
+    Redirect 301 /project-milan.html /project/milan
+    Redirect 301 /project-keyptaun.html /project/kejptaun
+    Redirect 301 /project-kanny.html /project/kanny
+    Redirect 301 /project-zheneva.html /project/zheneva
+    Redirect 301 /project-keln.html /project/kyoln
+    Redirect 301 /project-nitstsa.html /project/nicca
+    Redirect 301 /project-bremen.html /project/bremen
+    Redirect 301 /project-toronto.html /project/toronto
+    Redirect 301 /project-bratislava.html /project/bratislava
+    Redirect 301 /project-kataloniya.html /project/kataloniya
+    Redirect 301 /project-amsterdam.html /project/amsterdam
+    Redirect 301 /project-larnaka.html /project/larnaka
+    Redirect 301 /project-budapesht.html /project/budapesht
+    Redirect 301 "/service-individual design.html" "/individualnoe-proektirovanie"
+    Redirect 301 /service-individual-design.html /individualnoe-proektirovanie
+    Redirect 301 /service-stroitelstvo.html /stroitelstvo
+    Redirect 301 /service-otdelochnye-raboty.html /otdelochnye-raboty
+    Redirect 301 /service-komplektacziya.html /komplektaciya-mebelyu
+    Redirect 301 /service-dizajn-interera.html /dizajn-interera
+</IfModule>

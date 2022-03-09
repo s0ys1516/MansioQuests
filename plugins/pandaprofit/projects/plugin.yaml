@@ -1,0 +1,11 @@
+plugin:
+    name: 'pandaprofit.projects::lang.plugin.name'
+    description: 'pandaprofit.projects::lang.plugin.description'
+    author: pandaprofit
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    projects:
+        label: Проекты
+        url: pandaprofit/projects/projects
+        icon: icon-home

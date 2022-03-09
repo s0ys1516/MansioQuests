@@ -1,0 +1,108 @@
+1646825674a:1:{s:14:"tehnologii.htm";a:11:{s:8:"fileName";s:14:"tehnologii.htm";s:7:"content";s:3787:"title = "Технологии"
+url = "/technology"
+layout = "default"
+meta_title = "О Технологиях строительства применяемых в строительстве частных домов и коттеджей"
+meta_description = "Подробно рассказываем о надежных и проверенных годами технологиях строительства. Только качественные строительные материалы крупных заводов-изготовителей"
+is_hidden = 0
+==
+{% set dsc = '<p style="text-transform: uppercase;">Высокое качество и надежность домов компании «<span
+    class="logo-brand">MANSIO
+    GROUP</span>» обусловлено использованием:</p>
+<ul>
+  <li>Надежных и&nbsp;проверенных годами технологий строительства</li>
+  <li>Только качественных строительных материалов крупных заводов-изготовителей</li>
+</ul>' %}
+{% partial 'sections/first-screen' title='Технологии строительства' bgClass='tech' dsc=dsc %}
+
+{% partial 'sections/tech' %}
+<section class="contacts">
+  <div class="contacts__bg">
+    <div class="container">
+      <div class="contacts__window">
+        <div class="action-call">
+          <div class="brand-flag">
+            <svg class="brand-flag__logo" width="103" height="16">
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+            </svg>
+          </div>
+          <div class="action-call__inner">
+            <div class="person  action-call__person">
+              <div class="person__name-wrap">
+                <p class="person__name">Александра Бикова</p>
+                <p class="person__sub-name">Проектный консультант</p>
+              </div>
+              <div class="person__foto-wrap action-call__person-foto">
+                <picture>
+                  <source srcset="{{ 'assets/images/content/manager-w.webp'|theme }} 1x" type="image/webp">
+                  <img src="{{ 'assets/images/content/manager-w.png'|theme }}" alt="Александра Бикова" width="704">
+                </picture>
+              </div>
+            </div>
+            <div class="action-call__right-col">
+              <!-- <span class="contacts-form__subject">Форма заявки</span> -->
+              <div class="contacts-form__title">Остались вопросы? <br>Мы&nbsp;проконсультируем Вас!</div>
+              <p class="action-call__dsc">
+                Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию</p>
+              <div class="action-call__form-wrap  action-call__form-wrap--fit">
+                <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "824449", hash: "82b1de926fdb7586c319326cd6a0c87f", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+                <script id="amoforms_script_824449" async="async" charset="utf-8"
+                  src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1640600534"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% partial 'elements/call2action_about' %}
+    </div>
+  </div>
+</section>";s:5:"mtime";i:1645713619;s:6:"markup";s:3219:"{% set dsc = '<p style="text-transform: uppercase;">Высокое качество и надежность домов компании «<span
+    class="logo-brand">MANSIO
+    GROUP</span>» обусловлено использованием:</p>
+<ul>
+  <li>Надежных и&nbsp;проверенных годами технологий строительства</li>
+  <li>Только качественных строительных материалов крупных заводов-изготовителей</li>
+</ul>' %}
+{% partial 'sections/first-screen' title='Технологии строительства' bgClass='tech' dsc=dsc %}
+
+{% partial 'sections/tech' %}
+<section class="contacts">
+  <div class="contacts__bg">
+    <div class="container">
+      <div class="contacts__window">
+        <div class="action-call">
+          <div class="brand-flag">
+            <svg class="brand-flag__logo" width="103" height="16">
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+            </svg>
+          </div>
+          <div class="action-call__inner">
+            <div class="person  action-call__person">
+              <div class="person__name-wrap">
+                <p class="person__name">Александра Бикова</p>
+                <p class="person__sub-name">Проектный консультант</p>
+              </div>
+              <div class="person__foto-wrap action-call__person-foto">
+                <picture>
+                  <source srcset="{{ 'assets/images/content/manager-w.webp'|theme }} 1x" type="image/webp">
+                  <img src="{{ 'assets/images/content/manager-w.png'|theme }}" alt="Александра Бикова" width="704">
+                </picture>
+              </div>
+            </div>
+            <div class="action-call__right-col">
+              <!-- <span class="contacts-form__subject">Форма заявки</span> -->
+              <div class="contacts-form__title">Остались вопросы? <br>Мы&nbsp;проконсультируем Вас!</div>
+              <p class="action-call__dsc">
+                Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию</p>
+              <div class="action-call__form-wrap  action-call__form-wrap--fit">
+                <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "824449", hash: "82b1de926fdb7586c319326cd6a0c87f", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+                <script id="amoforms_script_824449" async="async" charset="utf-8"
+                  src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1640600534"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% partial 'elements/call2action_about' %}
+    </div>
+  </div>
+</section>";s:4:"code";N;s:5:"title";s:20:"Технологии";s:3:"url";s:11:"/technology";s:6:"layout";s:7:"default";s:10:"meta_title";s:153:"О Технологиях строительства применяемых в строительстве частных домов и коттеджей";s:16:"meta_description";s:290:"Подробно рассказываем о надежных и проверенных годами технологиях строительства. Только качественные строительные материалы крупных заводов-изготовителей";s:9:"is_hidden";s:1:"0";}}

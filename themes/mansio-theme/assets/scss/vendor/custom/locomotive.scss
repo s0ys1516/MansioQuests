@@ -1,0 +1,55 @@
+.c-scrollbar {
+  height: 100vh;
+}
+
+/* $Images
+   ====================================== */
+
+// .js-picture {
+//   overflow: hidden;
+//   will-change: transform;
+// }
+
+// .has-scroll-smooth .js-picture__img--big-scroll {
+//   --overflow: 80px;
+// }
+
+// .has-scroll-smooth .js-picture__img--mid-scroll {
+//   --overflow: 60px;
+// }
+
+// @media screen and (min-width: 1900px) {
+//   .has-scroll-smooth .js-picture__img--big-scroll {
+//     --overflow: 120px;
+//   }
+
+//   .has-scroll-smooth .js-picture__img--mid-scroll {
+//     --overflow: 80px;
+//   }
+// }
+
+// .has-scroll-smooth .js-picture__img {
+//   position: relative;
+//   will-change: transform;
+//   height: calc(100% + (2 * var(--overflow)));
+//   top: calc(-1 * var(--overflow));
+//   object-fit: cover;
+//   width: 100%;
+// }
+
+/* $Text animate
+   ====================================== */
+
+.animated-text,
+.animated-text.is-inview.hideFb {
+  opacity: 0;
+  // animation: fadeInUp 1s ease;
+  transition: all 1s ease;
+  transform: translateY(1vw);
+}
+
+.animated-text.animated-text--active,
+.animated-text.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}

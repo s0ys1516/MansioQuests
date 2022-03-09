@@ -1,0 +1,126 @@
+fields:
+    title:
+        label: 'Название проекта'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'Slug (URL)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    type:
+        label: 'Тип проекта (признак)'
+        options:
+            'Типовой проект': 'Типовой проект'
+            'Авторский проект': 'Авторский проект'
+        showSearch: 0
+        span: auto
+        placeholder: 'Не указан'
+        type: dropdown
+    square:
+        label: Площадь
+        span: auto
+        placeholder: '166,5'
+        type: number
+    description:
+        label: 'Описание проекта'
+        size: large
+        span: full
+        stretch: 0
+        type: richeditor
+    floors:
+        label: Этаж
+        options:
+            1: Один
+            2: Два
+        span: auto
+        type: radio
+    material:
+        label: Материал
+        options:
+            'Газоблок / Теплая креамика (Porotherm)': 'Газоблок / Теплая креамика (Porotherm)'
+        showSearch: 0
+        span: auto
+        type: dropdown
+    bedrooms:
+        label: Спальни
+        span: auto
+        type: number
+        comment: 'Целым числом'
+    bathrooms:
+        label: 'Санузлы (ванные)'
+        span: auto
+        type: number
+        comment: 'Целым числом'
+    closet:
+        label: Гардеробные
+        span: auto
+        type: number
+        comment: 'Целым числом'
+    balconies:
+        label: Балконы
+        span: auto
+        type: number
+        comment: 'Целым числом'
+    price:
+        label: Стоимость
+        span: auto
+        type: text
+    main_image:
+        label: 'Главное изображение'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    pdf_href:
+        label: Презентация
+        mode: file
+        span: auto
+        type: mediafinder
+        comment: 'PDF файл'
+tabs:
+    fields:
+        project_gallery:
+            label: 'Внешний вид'
+            mode: image
+            imageWidth: '80'
+            imageHeight: '80'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Галереи
+        project_planning:
+            label: Планировки
+            mode: image
+            imageWidth: '80'
+            imageHeight: '80'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Галереи
+        project_facades:
+            label: Фасады
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            imageWidth: '80'
+            imageHeight: '80'
+            type: fileupload
+            tab: Галереи

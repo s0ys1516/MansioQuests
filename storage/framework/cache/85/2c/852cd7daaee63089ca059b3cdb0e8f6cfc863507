@@ -1,0 +1,158 @@
+1646825674a:1:{s:12:"vakansii.htm";a:11:{s:8:"fileName";s:12:"vakansii.htm";s:7:"content";s:6154:"title = "Вакансии"
+url = "/vacancy"
+layout = "default"
+meta_title = "Вакансии"
+meta_description = "Карьера и вакансии в строительной компании MANSIO GROUP в Москве — перечень, требования, записаться на собеседование online."
+is_hidden = 0
+==
+{% partial 'sections/first-screen' bgClass='vacancy' title='Вакансии' %}
+
+<div class="container">
+        <div class="tabs  vacancy">
+          <ul class="tabs__list nav nav-tabs bemParent__tabs-list" id="navTabsList" role="tablist">
+            <li class="tabs__list-item bemParent__tab-wrap" role="presentation">
+
+              <button class="tabs__btn active bemParent__tab" id="officeTab" type="button" role="tab"
+                aria-controls="officePane" aria-selected="true" data-bs-toggle="tab" data-bs-target="#officePane">
+                Офисные вакансии
+              </button>
+            </li>
+            <li class="tabs__list-item bemParent__tab-wrap" role="presentation">
+
+              <button class="tabs__btn bemParent__tab" id="builderTab" type="button" role="tab"
+                aria-controls="builderPane" aria-selected="true" data-bs-toggle="tab" data-bs-target="#builderPane">
+                Бригадам и&nbsp;прорабам
+              </button>
+            </li>
+
+          </ul>
+
+          <div class="vacancy__tabs-content">
+            <section class="tabs__pane active" id="officePane" role="tabpanel" aria-labelledby="officeTab">
+              <h2 class="visually-hidden">Вакансии в штат компании Mansio Group</h2>
+              <div class="bemParent__section">
+              	
+              	{% partial 'elements/vacancy-list' %}
+
+              </div>
+            </section>
+
+            <section class="tabs__pane" id="builderPane" role="tabpanel" aria-labelledby="builderTab">
+              <div class="bemParent__section">
+                <ul class="vacancy-list">
+                    <li class="vacancy-list__item">
+                      <b class="vacancy__title">Прораб (загородное домостроение)</b>
+                      <div class="vacancy-list__dsc">
+                        <ul>
+                          <li>Организацией и&nbsp;руководством производственно-хозяйственной деятельности на&nbsp;объекта;</li>
+                          <li>Производством строительно-монтажных работ в&nbsp;соответствии с&nbsp;проектной документацией, строительными
+                            нормами и правилами, техническими условиями и&nbsp;другими нормативными документами;</li>
+                          <li>Соблюдением норм точности и&nbsp;правил ведения строительных работ на&nbsp;объекте, утвержденных
+                            в&nbsp;компании;
+                          </li>
+                          <li>Соблюдением технологической последовательности производства строительно-монтажных работ на&nbsp;участке;
+                          </li>
+                          <li>Получением технической документации на&nbsp;строительство объектов;</li>
+                          <li>Ведением учета выполненных работ, оформление технической документации;</li>
+                          <li>Участием в&nbsp;сдаче заказчикам законченных строительством объектов, отдельных этапов и&nbsp;комплексов
+                            работ по
+                            возводимым объектам;</li>
+                          <li>Инструктажем рабочих, непосредственно на&nbsp;рабочем месте по&nbsp;технике безопасности выполняемых работ
+                          </li>
+                          <li>Применением технологической оснастки (лесов, подмостей, защитных приспособлений, креплений стенок котлованов
+                            и
+                            траншей, подкосов, кондукторов и&nbsp;других устройств), транспортных средств и&nbsp;средств защиты
+                            работников;</li>
+                          <li>Контролем за&nbsp;качеством и&nbsp;безопасностью выполняемых работ;</li>
+                          <li>Контролем техники безопасности и&nbsp;принятия мер к&nbsp;устранению выявленных недостатков, нарушений
+                            правил
+                            производственной санитарии, соблюдение рабочими инструкций по&nbsp;охране труда;
+                          <li>Обеспечением соблюдения работниками производственной и&nbsp;трудовой дисциплины.</li>
+                        </ul>
+                      </div>
+                      {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy4' %}
+                      
+                      {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>";s:5:"mtime";i:1645713619;s:6:"markup";s:5807:"{% partial 'sections/first-screen' bgClass='vacancy' title='Вакансии' %}
+
+<div class="container">
+        <div class="tabs  vacancy">
+          <ul class="tabs__list nav nav-tabs bemParent__tabs-list" id="navTabsList" role="tablist">
+            <li class="tabs__list-item bemParent__tab-wrap" role="presentation">
+
+              <button class="tabs__btn active bemParent__tab" id="officeTab" type="button" role="tab"
+                aria-controls="officePane" aria-selected="true" data-bs-toggle="tab" data-bs-target="#officePane">
+                Офисные вакансии
+              </button>
+            </li>
+            <li class="tabs__list-item bemParent__tab-wrap" role="presentation">
+
+              <button class="tabs__btn bemParent__tab" id="builderTab" type="button" role="tab"
+                aria-controls="builderPane" aria-selected="true" data-bs-toggle="tab" data-bs-target="#builderPane">
+                Бригадам и&nbsp;прорабам
+              </button>
+            </li>
+
+          </ul>
+
+          <div class="vacancy__tabs-content">
+            <section class="tabs__pane active" id="officePane" role="tabpanel" aria-labelledby="officeTab">
+              <h2 class="visually-hidden">Вакансии в штат компании Mansio Group</h2>
+              <div class="bemParent__section">
+              	
+              	{% partial 'elements/vacancy-list' %}
+
+              </div>
+            </section>
+
+            <section class="tabs__pane" id="builderPane" role="tabpanel" aria-labelledby="builderTab">
+              <div class="bemParent__section">
+                <ul class="vacancy-list">
+                    <li class="vacancy-list__item">
+                      <b class="vacancy__title">Прораб (загородное домостроение)</b>
+                      <div class="vacancy-list__dsc">
+                        <ul>
+                          <li>Организацией и&nbsp;руководством производственно-хозяйственной деятельности на&nbsp;объекта;</li>
+                          <li>Производством строительно-монтажных работ в&nbsp;соответствии с&nbsp;проектной документацией, строительными
+                            нормами и правилами, техническими условиями и&nbsp;другими нормативными документами;</li>
+                          <li>Соблюдением норм точности и&nbsp;правил ведения строительных работ на&nbsp;объекте, утвержденных
+                            в&nbsp;компании;
+                          </li>
+                          <li>Соблюдением технологической последовательности производства строительно-монтажных работ на&nbsp;участке;
+                          </li>
+                          <li>Получением технической документации на&nbsp;строительство объектов;</li>
+                          <li>Ведением учета выполненных работ, оформление технической документации;</li>
+                          <li>Участием в&nbsp;сдаче заказчикам законченных строительством объектов, отдельных этапов и&nbsp;комплексов
+                            работ по
+                            возводимым объектам;</li>
+                          <li>Инструктажем рабочих, непосредственно на&nbsp;рабочем месте по&nbsp;технике безопасности выполняемых работ
+                          </li>
+                          <li>Применением технологической оснастки (лесов, подмостей, защитных приспособлений, креплений стенок котлованов
+                            и
+                            траншей, подкосов, кондукторов и&nbsp;других устройств), транспортных средств и&nbsp;средств защиты
+                            работников;</li>
+                          <li>Контролем за&nbsp;качеством и&nbsp;безопасностью выполняемых работ;</li>
+                          <li>Контролем техники безопасности и&nbsp;принятия мер к&nbsp;устранению выявленных недостатков, нарушений
+                            правил
+                            производственной санитарии, соблюдение рабочими инструкций по&nbsp;охране труда;
+                          <li>Обеспечением соблюдения работниками производственной и&nbsp;трудовой дисциплины.</li>
+                        </ul>
+                      </div>
+                      {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy4' %}
+                      
+                      {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>";s:4:"code";N;s:5:"title";s:16:"Вакансии";s:3:"url";s:8:"/vacancy";s:6:"layout";s:7:"default";s:10:"meta_title";s:16:"Вакансии";s:16:"meta_description";s:213:"Карьера и вакансии в строительной компании MANSIO GROUP в Москве — перечень, требования, записаться на собеседование online.";s:9:"is_hidden";s:1:"0";}}

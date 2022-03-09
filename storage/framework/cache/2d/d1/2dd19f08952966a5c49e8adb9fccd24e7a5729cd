@@ -1,0 +1,252 @@
+1646825674a:1:{s:17:"global/footer.htm";a:6:{s:8:"fileName";s:17:"global/footer.htm";s:7:"content";s:5978:"[viewBag]
+==
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<div class="footer__name">
+				<a class="footer__logo" {% if this.page.url !='/' %} href="{{ '/'|app }}" aria-label="Переход на главную"
+					{% endif %}>
+					<svg>
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+					</svg>
+				</a>
+				<p class="footer__title">Строим дома бизнес-класса в Москве и Московской области</p>
+				<div class="footer__bank">
+					<span>ООО «МАНСИО ГРУПП»</span>
+					<span>ИНН 7727435818</span>
+					<span>ОГРН 1197746734767</span>
+				</div>
+				<a class="footer__policy" href="{{ 'assets/downloads/privacy.pdf'|theme }}" download>Политика конфиденциальности</a>
+				<p style="font-size:12px;">Информация, представленная на сайте, не является публичной офертой.</p>
+			</div>
+			<div class="footer__center">
+				<nav class="footer__nav">
+					<a class="footer__link {% if this.page.id == 'catalog' %}footer__link--active{% endif %}" {% if this.page.id
+						!='catalog' %} href="{{ 'catalog'|page }}" {% endif %}>Проекты</a>
+
+					<a class="footer__link {% if this.page.id == 'uslugi' %}footer__link--active{% endif %}" {% if this.page.id
+						!='uslugi' %} href="{{ 'uslugi'|page }}" {% endif %}>Услуги</a>
+
+					<a class="footer__link {% if this.page.id == 'tehnologii' %}footer__link--active{% endif %}" {% if
+						this.page.id !='tehnologii' %} href="{{ 'tehnologii'|page }}" {% endif %}>Технологии</a>
+
+					<a class="footer__link {% if this.page.id == 'o-nas' %}footer__link--active{% endif %}" {% if this.page.id
+						!='o-nas' %}href="{{ 'o-nas'|page }}" {% endif %}>О нас</a>
+
+					<a class="footer__link {% if this.page.id == 'vakansii' %}footer__link--active{% endif %}" {% if this.page.id
+						!='vakansii' %}href="{{ 'vakansii'|page }}" {% endif %}>Вакансии</a>
+
+					<a class="footer__link {% if this.page.id == 'kontakty' %}footer__link--active{% endif %}" {% if this.page.id
+						!='kontakty' %}href="{{ 'kontakty'|page }}" {% endif %}>Контакты</a>
+				</nav>
+				<!-- <div class="footer__login">
+          <a href="##">
+            <svg>
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#login'|theme }}"></use>
+            </svg>
+            Войти в личный кабинет
+          </a>
+        </div> -->
+			</div>
+			<div class="footer__contacts">
+				<address class="footer__wrap">
+					<div class="footer__item  footer__item--two-col">
+						<div class="footer__item-wrap">
+							<div class="footer__text">
+								<a class="footer__phone" href="tel:+74951820242">
+									<svg width="18" class="phone-icon">
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#contacts-icon-2'|theme }}"></use>
+									</svg>
+									+7 (495) 182-02-42
+								</a>
+								<button type="button" data-modal="back-call">Получить консультацию</button>
+							</div>
+						</div>
+						<div class="footer__social  socials  socials--bg-white">
+							<a class="socials__link" href="https://t.me/mansio_group" target="_blank" rel="nofollow">
+								<svg class="socials__icon  socials__icon--tg" width="27" height="23">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#telegram'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link"
+								href="https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20"
+								target="_blank" rel="nofollow">
+								<svg class="socials__icon  socials__icon--wa" width="23" height="23">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#whatsapp'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://www.instagram.com/mansio_group.ru/" target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#instagram'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://business.facebook.com/Mansio-Строительство-домов-103324025394478/"
+								target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#facebook'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://vm.tiktok.com/ZSeSrcbk3/" target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#tik-tok'|theme }}"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-wrap">
+							<svg>
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#reviews-slider-icon-2'|theme }}"></use>
+							</svg>
+							<div class="footer__text">
+								<div class="footer__subtitle">Адрес:</div>
+								<span>Рублево-Успенское шоссе 1 км, д 6, офис 512</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-wrap">
+							<svg>
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#footer-icon-1'|theme }}"></use>
+							</svg>
+							<div class="footer__text">
+								<div class="footer__subtitle">Электронная почта:</div>
+								<a style="color: inherit" href="mailto:{{ html_email('info@mansio-group.ru') }}">info@mansio-group.ru</a>
+							</div>
+						</div>
+					</div>
+				</address>
+				{% partial 'elements/btn' text='Обратный звонок' modal='back-call' %}
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KQWSGF" height="0" width="0"
+		style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+";s:5:"mtime";i:1645713619;s:6:"markup";s:5964:"<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<div class="footer__name">
+				<a class="footer__logo" {% if this.page.url !='/' %} href="{{ '/'|app }}" aria-label="Переход на главную"
+					{% endif %}>
+					<svg>
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+					</svg>
+				</a>
+				<p class="footer__title">Строим дома бизнес-класса в Москве и Московской области</p>
+				<div class="footer__bank">
+					<span>ООО «МАНСИО ГРУПП»</span>
+					<span>ИНН 7727435818</span>
+					<span>ОГРН 1197746734767</span>
+				</div>
+				<a class="footer__policy" href="{{ 'assets/downloads/privacy.pdf'|theme }}" download>Политика конфиденциальности</a>
+				<p style="font-size:12px;">Информация, представленная на сайте, не является публичной офертой.</p>
+			</div>
+			<div class="footer__center">
+				<nav class="footer__nav">
+					<a class="footer__link {% if this.page.id == 'catalog' %}footer__link--active{% endif %}" {% if this.page.id
+						!='catalog' %} href="{{ 'catalog'|page }}" {% endif %}>Проекты</a>
+
+					<a class="footer__link {% if this.page.id == 'uslugi' %}footer__link--active{% endif %}" {% if this.page.id
+						!='uslugi' %} href="{{ 'uslugi'|page }}" {% endif %}>Услуги</a>
+
+					<a class="footer__link {% if this.page.id == 'tehnologii' %}footer__link--active{% endif %}" {% if
+						this.page.id !='tehnologii' %} href="{{ 'tehnologii'|page }}" {% endif %}>Технологии</a>
+
+					<a class="footer__link {% if this.page.id == 'o-nas' %}footer__link--active{% endif %}" {% if this.page.id
+						!='o-nas' %}href="{{ 'o-nas'|page }}" {% endif %}>О нас</a>
+
+					<a class="footer__link {% if this.page.id == 'vakansii' %}footer__link--active{% endif %}" {% if this.page.id
+						!='vakansii' %}href="{{ 'vakansii'|page }}" {% endif %}>Вакансии</a>
+
+					<a class="footer__link {% if this.page.id == 'kontakty' %}footer__link--active{% endif %}" {% if this.page.id
+						!='kontakty' %}href="{{ 'kontakty'|page }}" {% endif %}>Контакты</a>
+				</nav>
+				<!-- <div class="footer__login">
+          <a href="##">
+            <svg>
+              <use xlink:href="{{ 'assets/images/sprite_auto.svg#login'|theme }}"></use>
+            </svg>
+            Войти в личный кабинет
+          </a>
+        </div> -->
+			</div>
+			<div class="footer__contacts">
+				<address class="footer__wrap">
+					<div class="footer__item  footer__item--two-col">
+						<div class="footer__item-wrap">
+							<div class="footer__text">
+								<a class="footer__phone" href="tel:+74951820242">
+									<svg width="18" class="phone-icon">
+										<use xlink:href="{{ 'assets/images/sprite_auto.svg#contacts-icon-2'|theme }}"></use>
+									</svg>
+									+7 (495) 182-02-42
+								</a>
+								<button type="button" data-modal="back-call">Получить консультацию</button>
+							</div>
+						</div>
+						<div class="footer__social  socials  socials--bg-white">
+							<a class="socials__link" href="https://t.me/mansio_group" target="_blank" rel="nofollow">
+								<svg class="socials__icon  socials__icon--tg" width="27" height="23">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#telegram'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link"
+								href="https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20"
+								target="_blank" rel="nofollow">
+								<svg class="socials__icon  socials__icon--wa" width="23" height="23">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#whatsapp'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://www.instagram.com/mansio_group.ru/" target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#instagram'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://business.facebook.com/Mansio-Строительство-домов-103324025394478/"
+								target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#facebook'|theme }}"></use>
+								</svg>
+							</a>
+							<a class="socials__link" href="https://vm.tiktok.com/ZSeSrcbk3/" target="_blank" rel="nofollow">
+								<svg class="socials__icon">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#tik-tok'|theme }}"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-wrap">
+							<svg>
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#reviews-slider-icon-2'|theme }}"></use>
+							</svg>
+							<div class="footer__text">
+								<div class="footer__subtitle">Адрес:</div>
+								<span>Рублево-Успенское шоссе 1 км, д 6, офис 512</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-wrap">
+							<svg>
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#footer-icon-1'|theme }}"></use>
+							</svg>
+							<div class="footer__text">
+								<div class="footer__subtitle">Электронная почта:</div>
+								<a style="color: inherit" href="mailto:{{ html_email('info@mansio-group.ru') }}">info@mansio-group.ru</a>
+							</div>
+						</div>
+					</div>
+				</address>
+				{% partial 'elements/btn' text='Обратный звонок' modal='back-call' %}
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KQWSGF" height="0" width="0"
+		style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->";s:4:"code";N;s:7:"viewBag";a:0:{}}}

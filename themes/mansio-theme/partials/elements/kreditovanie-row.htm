@@ -1,0 +1,44 @@
+==
+	<div class="promo container  container--xxl">
+<div class="promo__inner">
+		<p class="promo__title">Кредитные продукты Банков партнеров Mansio Group для строительства дома в&nbsp;2022&nbsp;г.</p>
+		<p class="promo__subtitle">«Строим, не ограничивая вашу финансовую свободу!»</p>
+		<div class="promo__row">
+			<div class="carousel glide">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide">
+							<button class="modal-btn" data-modal="back-call" type="button" data-bank="dom-rf">
+								<svg class="bank-logo" width="125">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#bank_dom-rf'|theme }}"></use>
+								</svg>
+							</button>
+						</li>
+						<li class="glide__slide">
+							<button class="modal-btn" data-modal="back-call" type="button" data-bank="sber">
+								<svg class="bank-logo" width="180">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#bank_sber'|theme }}"></use>
+								</svg>
+							</button>
+						</li>
+						<li class="glide__slide">
+							<button class="modal-btn" data-modal="back-call" type="button" data-bank="pochta-bank">
+								<svg class="bank-logo" width="100">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#bank_pb'|theme }}"></use>
+								</svg>
+							</button>
+						</li>
+						<li class="glide__slide">
+							<button class="modal-btn" data-modal="back-call" type="button" data-bank="rosselkhoz">
+								<svg class="bank-logo" width="194">
+									<use xlink:href="{{ 'assets/images/sprite_auto.svg#bank_rs'|theme }}"></use>
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			{% partial 'elements/btn' href='/kreditovanie' text='Перейти в раздел кредитование' bemElement='promo__btn' %}
+		</div>
+	</div>
+</div>

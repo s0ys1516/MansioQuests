@@ -1,0 +1,34 @@
+1646825674a:1:{s:7:"404.htm";a:9:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:1067:"title = "Page not found (404)"
+url = "/404"
+layout = "default"
+is_hidden = 0
+==
+<div class="first-screen  first-screen--thankyou">
+    <div class="container">
+        <div class="first-screen__inner">
+            <h1 class="first-screen__title">Страница не найдена</h1>
+            <p>Сожалем, но похоже мы потеряли эту страницу</p>
+            <p>Мы можем помочь найти нужную информацию</p>
+            <p>Позвоните нам по номеру  <a href='tel:+74951820242'>+7 (495)
+                    182-02-42</a> или напишите в&nbsp;мессенджер: <a
+                    href='https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20'
+                    target="_blank">Whatsapp</a> или <a href='https://t.me/mansio_group' target="_blank">Telegram</a>
+            </p>
+            {% partial 'elements/btn' text='Вернуться на главную' href='/' %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1645713619;s:6:"markup";s:987:"<div class="first-screen  first-screen--thankyou">
+    <div class="container">
+        <div class="first-screen__inner">
+            <h1 class="first-screen__title">Страница не найдена</h1>
+            <p>Сожалем, но похоже мы потеряли эту страницу</p>
+            <p>Мы можем помочь найти нужную информацию</p>
+            <p>Позвоните нам по номеру  <a href='tel:+74951820242'>+7 (495)
+                    182-02-42</a> или напишите в&nbsp;мессенджер: <a
+                    href='https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20'
+                    target="_blank">Whatsapp</a> или <a href='https://t.me/mansio_group' target="_blank">Telegram</a>
+            </p>
+            {% partial 'elements/btn' text='Вернуться на главную' href='/' %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:20:"Page not found (404)";s:3:"url";s:4:"/404";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

@@ -1,0 +1,26 @@
+1646825674a:1:{s:18:"global/scripts.htm";a:6:{s:8:"fileName";s:18:"global/scripts.htm";s:7:"content";s:578:"[viewBag]
+==
+{# <script src="{{ 'assets/javascript/vendor/modernizr-webp.js'|theme }}"></script> #}
+{# <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script> #}
+{# <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script> #}
+<!-- {# <script src="{{ 'node_modules/glightbox/dist/js/glightbox.min.js'|theme }}"></script> #} -->
+{# <script src="{{ 'assets/javascript/vendor.js'|theme }}"></script> #}
+
+
+<script src="{{ 'assets/dist/vendor.min.js'|theme }}"></script>
+<script src="{{ 'assets/dist/main.min.js'|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+";s:5:"mtime";i:1646043778;s:6:"markup";s:564:"{# <script src="{{ 'assets/javascript/vendor/modernizr-webp.js'|theme }}"></script> #}
+{# <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script> #}
+{# <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script> #}
+<!-- {# <script src="{{ 'node_modules/glightbox/dist/js/glightbox.min.js'|theme }}"></script> #} -->
+{# <script src="{{ 'assets/javascript/vendor.js'|theme }}"></script> #}
+
+
+<script src="{{ 'assets/dist/vendor.min.js'|theme }}"></script>
+<script src="{{ 'assets/dist/main.min.js'|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}";s:4:"code";N;s:7:"viewBag";a:0:{}}}

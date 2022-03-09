@@ -1,0 +1,139 @@
+.project {
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  // align-items: flex-start;
+  column-gap: 5.2vw;
+  // column-gap: 100px;
+  line-height: 1;
+  padding: 0 3.13%;
+
+  @include viewport--lg {
+    column-gap: 30px;
+  }
+
+  @include viewport--sm {
+    flex-flow: column-reverse wrap;
+  }
+
+  &__left-col {
+    width: 550%;
+    max-width: 50%;
+  }
+
+  &__right-col {
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    @include viewport--sm {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    @include h2;
+  }
+
+  /* $Project__btn
+     ====================================== */
+
+  &__btn {
+    margin-top: 30px;
+  }
+
+
+  /* $Project__author-row
+     ====================================== */
+
+  &__author-row {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0;
+
+    @include viewport--lg {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__author-content {
+    flex-shrink: 0;
+  }
+}
+
+/* ======================================
+   $Project-gallery
+   ====================================== */
+
+.project-gallery {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: $gap;
+  max-width: 885px;
+
+  // &__main-picture-wrap {}
+
+  &__main-picture {
+    width: 100%;
+    max-width: 885px;
+  }
+
+  &__thumbnails {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    // justify-content: space-between;
+    gap: $gap;
+  }
+
+  &__thumbnails-item {
+    max-width: 210px;
+    list-style: none;
+    flex-grow: 1;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* ======================================
+   $Author
+   ====================================== */
+
+.author {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  // font-size: var(--font-size-sm);
+  font-size: 16.7px;
+  line-height: $line-height;
+
+  // TEMP FIXME: пока используется статическое значение шрифта: 16.7px
+  @include viewport--xs {
+    font-size: 14px;
+  }
+
+  &__picture-wrap {
+    margin-right: 25px;
+  }
+
+  &__img {
+		border-radius: 50%;
+		outline: 1px solid $metalic-blue;
+  }
+
+  &__name {
+    font-size: $font-size-h4;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: $line-height-title;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "mansio",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">     <img src=\"https://github.com/wintercms/winter/raw/develop/.github/assets/Github%20Banner.png?raw=true\" alt=\"Winter CMS Logo\" width=\"100%\" /> </p>",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "mix watch",
+    "dev": "mix",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "mix --production",
+		"test": "htmlhint themes/**/*.htm*",
+    "lighthouse": "lighthouse http://mansio.local"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "gulp": "4.0.x",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "htmlhint": "^1.1.2",
+    "laravel-mix": "^6.0.41",
+    "lighthouse": "^9.3.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "@popperjs/core": "^2.11.2",
+    "bootstrap": "^5.1.3",
+    "glightbox": "^3.1.0",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.6.0",
+    "locomotive-scroll": "^4.1.4",
+    "vanilla-lazyload": "^17.5.0"
+  }
+}

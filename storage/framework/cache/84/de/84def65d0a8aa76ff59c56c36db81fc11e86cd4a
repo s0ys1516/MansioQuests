@@ -1,0 +1,9 @@
+1646825674a:1:{s:32:"vse-o-proektah-i-arhitekture.htm";a:7:{s:8:"fileName";s:32:"vse-o-proektah-i-arhitekture.htm";s:7:"content";s:361:"[viewBag]
+title = "Все о проектах и архитектуре"
+url = "/vse-o-proektah-i-arhitekture"
+layout = "Technology"
+is_hidden = 0
+navigation_hidden = 1
+meta_title = "Все о проектах и архитектуре"
+meta_description = "Рассказываем о своём подходе к проектам в архитектуре."
+==";s:5:"mtime";i:1645713619;s:6:"markup";s:0:"";s:4:"code";N;s:7:"viewBag";a:7:{s:5:"title";s:52:"Все о проектах и архитектуре";s:3:"url";s:29:"/vse-o-proektah-i-arhitekture";s:6:"layout";s:10:"Technology";s:9:"is_hidden";s:1:"0";s:17:"navigation_hidden";s:1:"1";s:10:"meta_title";s:52:"Все о проектах и архитектуре";s:16:"meta_description";s:100:"Рассказываем о своём подходе к проектам в архитектуре.";}s:12:"parsedMarkup";s:0:"";}}

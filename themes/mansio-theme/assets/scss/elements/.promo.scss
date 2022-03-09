@@ -1,0 +1,91 @@
+.promo {
+	font-size: 24px;
+
+
+	&__inner {
+		padding: 90px 0 100px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		@include viewport--md {
+			padding: 80px 0 80px;
+			text-align: center;
+		}
+
+		@include viewport--sm {
+			padding: 60px 0 70px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+
+		@include viewport--sm {
+			font-size: 18px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		font-style: italic;
+		color: #ABADB4;
+
+		@include viewport--sm {
+			font-size: 20px;
+		}
+	}
+
+	&__row {
+		align-self: stretch;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 20px;
+
+		@include viewport--lg {
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+
+	&__btn {
+		flex-shrink: 0;
+	}
+
+	.carousel {
+		width: 860px;
+
+		@include viewport--lg {
+			width: 100%;
+		}
+
+		.glide__slides {
+			overflow: visible;
+		}
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+
+	.modal-btn {
+		display: block;
+		margin: 0 auto;
+		cursor: pointer;
+		transition: transform $default-transition-settings;
+
+		&:hover,
+		&:focus {
+			transform: translateY(-7px);
+		}
+	}
+
+	.bank-logo {
+		display: block;
+		margin: 0 auto;
+		max-height: 100px;
+		// width: auto;
+	}
+
+}

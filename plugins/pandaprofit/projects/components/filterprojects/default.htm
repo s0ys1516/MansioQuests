@@ -1,0 +1,91 @@
+{% set projects = filterprojects.projects %}
+{% set categorys = filterprojects.categorys %}
+
+<div class="filter" id="beforeCatalog">
+	<div class="filter__panel">
+		<button class="filter__btn" id='filterShow' type="button">
+			Показать фильтр
+			<svg>
+				<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme}}"></use>
+			</svg>
+		</button>
+	</div>
+	<div id="filterContent" class="filter__inner">
+		<div class="container">
+			<form method="GET" action="{{ url('projects') }}">
+				<div id="projectsFilterContent" class="row">
+					<div class="col-md-w-50">
+						<label for="projectsFilterCategorySelect" class="form-label">Категории</label>
+						<select id="projectsFilterCategorySelect" class="form-select form-select-lg mb-3" name="category">
+							<option value="">Выберите категорию</option>
+							{% for category in categorys %}
+							<option value="{{category}}">{{category}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<!-- nav -->
+				<div class="filter__nav">
+					<button class="filter__btn filter__btn--show" id='filterHide' type="button">
+						Скрыть фильтр
+						<svg>
+							<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme}}"></use>
+						</svg>
+					</button>
+					<button class="filter__submit  btn  btn--blue" type="submit">
+						Применить фильтры
+						<span>
+							<svg>
+								<use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme}}"></use>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<section class="catalog" id="sectionCatalog">
+	<h2 class="visually-hidden">Каталог домов</h2>
+
+	<ul class="catalog__list">
+		{% for project in projects %}
+		<li class=" card  card--catalog catalog__item">
+			<a class="card__link-wrapper" href="/project/{{project.slug}}">
+				<div class="card__content">
+					<dl class="card__headline">
+						<dt class="card__title">{{ project.title }}</dt>
+						<dd class="card__subtitle">{{ project.type }} </dd>
+					</dl>
+				</div>
+				<div class="card__picture">
+					<img src="{{ project.main_image.thumb(950,auto) }}" alt="{{ project.main_image.title }}" width="950">
+				</div>
+			</a>
+			<div class="card__info-pane  card-pane">
+				<dl class="card-pane__name-wrapper">
+					<dt class="card__title  card-pane__title">{{ project.title }}</dt>
+					<dd class="card__subtitle  card-pane__subtitle">{{ project.type }}</dd>
+				</dl>
+				<dl class="card-pane__property-list">
+					<div class="card-pane__property">
+						<dt>Площадь:</dt>
+						<dd>{{ project.square }}&nbsp;м2</dd>
+					</div>
+					<div class="card-pane__property">
+						<dt>Этажность</dt>
+						<dd>{{ project.floors }}</dd>
+					</div>
+					<div class="card-pane__property  card-pane__property--label">
+						<dt>Материал</dt>
+						<dd>{{ project.material }}</dd>
+					</div>
+				</dl>
+				<a href="/project/{{project.slug}}" class="btn  card-pane__btn">Открыть проект</a>
+			</div>
+		</li>
+		{% else %}
+		<li class="no-data">Проекты не найдены</li>
+		{% endfor %}
+	</ul>
+</section>

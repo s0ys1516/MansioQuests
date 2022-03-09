@@ -1,0 +1,155 @@
+1646825686a:1:{s:25:"elements/vacancy-list.htm";a:6:{s:8:"fileName";s:25:"elements/vacancy-list.htm";s:7:"content";s:6312:"[viewBag]
+==
+<ul class="vacancy-list">
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Архитектор/инженер-архитектор/инженер-строитель с опытом проектирования малоэтажных
+      каменных домов и коттеджей!</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектной/рабочей документации с&nbsp;помощью <b>AUTODESK REVIT</b></li>
+        <li>Применение типовых технологических решений, используемых в&nbsp;компании и&nbsp;разработка новых решений при
+          конструктивной необходимости</li>
+        <li>Выявление современных тенденций архитектуры, разработка концепции развития отдела</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy1' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Ведущий архитектор/инженер-архитектор/инженер-строитель с опытом проектирования
+      малоэтажных каменных домов и коттеджей!</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектной/рабочей документации с помощью <b>AUTODESK REVIT</b></li>
+        <li>Применение типовых технологических решений, используемых в&nbsp;компании и&nbsp;разработка новых решений при
+          конструктивной необходимости</li>
+        <li>Организация работы отдела архитектуры, набор сотрудников, руководство,</li>
+        <li>Выявление современных тенденций архитектуры, разработка концепции развития отдела</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy2' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Конструктор</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектных решений конструкций зданий.</li>
+        <li>Оформление расчетно-пояснительной записки и&nbsp;графической части.</li>
+        <li>Выполнение расчетов с&nbsp;применением современных программных средств.</li>
+        <li>Расчет схем зданий (SCAD, ЛИРА и&nbsp;пр. продукты САПР).</li>
+        <li>Рассмотрение и&nbsp;анализ проектной документации субподрядчиков.</li>
+        <li>Составление замечаний и&nbsp;рекомендаций.</li>
+        <li>Разработка рабочей документации с&nbsp;помощью <b>AUTODESK REVIT</b>.</li>
+        <li>Выполнение поставленных задач главного инженера.</li>
+        <li>Взаимодействие с&nbsp;производственно-техническим отделом.</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки.</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy3' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Сметчик</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Составление смет в&nbsp;коммерческих расценках под индивидуальный проект дома на
+          строительные и&nbsp;отделочные работы на&nbsp;основе проектных данных (эскизы, проекты,
+          чертежи);</li>
+        <li>Составление сметных расчетов без проектной документации по&nbsp;приблизительным количественным показателям
+          (спецификации) и&nbsp;др.</li>
+        <li>Проверка правильности составления смет расходов подрядными организациями;</li>
+        <li>Расчет себестоимости обслуживания объектов по&nbsp;ФОТ</li>
+        <li>Формирование смет для клиентов в&nbsp;Excel</li>
+        <li>Ведение отчета план-факт по&nbsp;маржинальности объектов, составление отчетов с&nbsp;причинами несоответствия
+          факта плану
+        </li>
+        <li>Взаимодействие с&nbsp;поставщиками и&nbsp;подрядчиками</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy5' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+</ul>";s:5:"mtime";i:1645713619;s:6:"markup";s:6299:"<ul class="vacancy-list">
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Архитектор/инженер-архитектор/инженер-строитель с опытом проектирования малоэтажных
+      каменных домов и коттеджей!</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектной/рабочей документации с&nbsp;помощью <b>AUTODESK REVIT</b></li>
+        <li>Применение типовых технологических решений, используемых в&nbsp;компании и&nbsp;разработка новых решений при
+          конструктивной необходимости</li>
+        <li>Выявление современных тенденций архитектуры, разработка концепции развития отдела</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy1' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Ведущий архитектор/инженер-архитектор/инженер-строитель с опытом проектирования
+      малоэтажных каменных домов и коттеджей!</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектной/рабочей документации с помощью <b>AUTODESK REVIT</b></li>
+        <li>Применение типовых технологических решений, используемых в&nbsp;компании и&nbsp;разработка новых решений при
+          конструктивной необходимости</li>
+        <li>Организация работы отдела архитектуры, набор сотрудников, руководство,</li>
+        <li>Выявление современных тенденций архитектуры, разработка концепции развития отдела</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy2' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Конструктор</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Разработка проектных решений конструкций зданий.</li>
+        <li>Оформление расчетно-пояснительной записки и&nbsp;графической части.</li>
+        <li>Выполнение расчетов с&nbsp;применением современных программных средств.</li>
+        <li>Расчет схем зданий (SCAD, ЛИРА и&nbsp;пр. продукты САПР).</li>
+        <li>Рассмотрение и&nbsp;анализ проектной документации субподрядчиков.</li>
+        <li>Составление замечаний и&nbsp;рекомендаций.</li>
+        <li>Разработка рабочей документации с&nbsp;помощью <b>AUTODESK REVIT</b>.</li>
+        <li>Выполнение поставленных задач главного инженера.</li>
+        <li>Взаимодействие с&nbsp;производственно-техническим отделом.</li>
+        <li>Ответственность за&nbsp;результаты и&nbsp;сроки.</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy3' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+
+  <li class="vacancy-list__item">
+    <b class="vacancy__title">Сметчик</b>
+    <div class="vacancy-list__dsc">
+      <ul>
+        <li>Составление смет в&nbsp;коммерческих расценках под индивидуальный проект дома на
+          строительные и&nbsp;отделочные работы на&nbsp;основе проектных данных (эскизы, проекты,
+          чертежи);</li>
+        <li>Составление сметных расчетов без проектной документации по&nbsp;приблизительным количественным показателям
+          (спецификации) и&nbsp;др.</li>
+        <li>Проверка правильности составления смет расходов подрядными организациями;</li>
+        <li>Расчет себестоимости обслуживания объектов по&nbsp;ФОТ</li>
+        <li>Формирование смет для клиентов в&nbsp;Excel</li>
+        <li>Ведение отчета план-факт по&nbsp;маржинальности объектов, составление отчетов с&nbsp;причинами несоответствия
+          факта плану
+        </li>
+        <li>Взаимодействие с&nbsp;поставщиками и&nbsp;подрядчиками</li>
+      </ul>
+    </div>
+    {% partial 'elements/btn' text='Подробнее о&nbsp;вакансии' mod='blue' bemElement='vacancy-list__btn' modal='vacancy5' %}
+    {% partial 'elements/btn' text='Оставить отклик' mod='borders' bemElement='vacancy-list__btn' modal='vacancyResponse' %}
+  </li>
+</ul>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

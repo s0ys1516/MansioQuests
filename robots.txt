@@ -1,0 +1,11 @@
+User-agent: Yandex
+Allow: /
+
+User-agent: *
+Allow: /
+
+Disallow: /index.php
+
+
+Sitemap: https://mansio-group.ru/sitemap.xml
+Host: https://mansio-group.ru

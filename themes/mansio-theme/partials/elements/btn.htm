@@ -1,0 +1,33 @@
+{#
+	href: link URL
+	mod: class modificator name
+	bemElement: full name class BEM-element
+	downoload: boolean parametr
+	text: text inner tag
+	modal: key in data-modal attr
+
+ #}
+{% if href %}
+<a href="{{ href }}" class="btn
+    {{ mod ? 'btn--' ~ mod }}
+    {{ bemElement ? bemElement }}"
+    {{ download ? 'download' }}>
+  {{ text|raw }}
+  <span><svg>
+      <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+    </svg></span>
+</a>
+{% else %}
+<button class="btn
+    {{ mod ? 'btn--' ~ mod }}
+    {{ bemElement ? bemElement }}"
+    {% if modal %}
+    data-modal="{{ modal }}"
+    {% endif %}
+    type="button">
+  {{ text|raw }}
+  <span><svg>
+      <use xlink:href="{{ 'assets/images/sprite_auto.svg#arrows'|theme }}"></use>
+    </svg></span>
+</button>
+{% endif %}

@@ -1,0 +1,31 @@
+1646825674a:1:{s:25:"sections/first-screen.htm";a:6:{s:8:"fileName";s:25:"sections/first-screen.htm";s:7:"content";s:877:"[viewBag]
+snippetCode = "first-screen"
+snippetName = "Первый экран"
+snippetProperties[titile][title] = "Заголовок"
+snippetProperties[titile][type] = "string"
+snippetProperties[titile][default] = ""
+snippetProperties[titile][options][] = ""
+snippetProperties[dsc][title] = "Описание"
+snippetProperties[dsc][type] = "string"
+snippetProperties[dsc][default] = ""
+snippetProperties[dsc][options][] = ""
+snippetProperties[bgClass][title] = "Класс фона"
+snippetProperties[bgClass][type] = "string"
+snippetProperties[bgClass][default] = ""
+snippetProperties[bgClass][options][] = ""
+==
+<div class="first-screen  {{ bgClass ? 'first-screen--' ~ bgClass }}" id="pageFirstScreen">
+  <div class="container">
+    <div class="first-screen__inner">
+      <h1 class="first-screen__title">{{ title|raw }}</h1>
+      {{ dsc|raw }}
+    </div>
+  </div>
+</div>";s:5:"mtime";i:1645713619;s:6:"markup";s:261:"<div class="first-screen  {{ bgClass ? 'first-screen--' ~ bgClass }}" id="pageFirstScreen">
+  <div class="container">
+    <div class="first-screen__inner">
+      <h1 class="first-screen__title">{{ title|raw }}</h1>
+      {{ dsc|raw }}
+    </div>
+  </div>
+</div>";s:4:"code";N;s:7:"viewBag";a:3:{s:11:"snippetCode";s:12:"first-screen";s:11:"snippetName";s:23:"Первый экран";s:17:"snippetProperties";a:3:{s:6:"titile";a:4:{s:5:"title";s:18:"Заголовок";s:4:"type";s:6:"string";s:7:"default";s:0:"";s:7:"options";a:1:{i:0;s:0:"";}}s:3:"dsc";a:4:{s:5:"title";s:16:"Описание";s:4:"type";s:6:"string";s:7:"default";s:0:"";s:7:"options";a:1:{i:0;s:0:"";}}s:7:"bgClass";a:4:{s:5:"title";s:19:"Класс фона";s:4:"type";s:6:"string";s:7:"default";s:0:"";s:7:"options";a:1:{i:0;s:0:"";}}}}}}

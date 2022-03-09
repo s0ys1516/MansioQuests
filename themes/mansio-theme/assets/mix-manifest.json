@@ -1,0 +1,8 @@
+{
+    "/dist/vendor.js": "/dist/vendor.js",
+    "/dist/main.js": "/dist/main.js",
+    "/dist/main.css": "/dist/main.css",
+    "/dist/vendor.min.js": "/dist/vendor.min.js",
+    "/dist/main.min.js": "/dist/main.min.js",
+    "/dist/main.min.css": "/dist/main.min.css"
+}

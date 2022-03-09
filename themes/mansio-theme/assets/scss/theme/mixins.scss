@@ -1,0 +1,113 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: local("#{$file_name}"), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Desktop first
+
+// 1900px
+@mixin viewport--xl {
+  @media (max-width: 1900px) {
+    @content;
+  }
+}
+
+// 1440px
+@mixin viewport--lg {
+  @media (max-width: 1439.98px) {
+    @content;
+  }
+}
+
+// 1024px
+@mixin viewport--md {
+  @media (max-width: 1023.98px) {
+    @content;
+  }
+}
+
+// 768px
+@mixin viewport--sm {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+// 576px
+@mixin viewport--xs {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1290px;
+  padding: 0 60px;
+  margin: 0 auto;
+
+  @include viewport--lg {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include viewport--md {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include viewport--sm {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin vh100 {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100); // stylelint-disable-line
+}
+
+@mixin h2 {
+  font-size: $font-size-h2;
+  font-weight: bold;
+  line-height: $line-height-title;
+  color: $secondary-color;
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  font-size: $font-size-h3;
+  font-weight: bold;
+  line-height: $line-height-title;
+  color: $secondary-color;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

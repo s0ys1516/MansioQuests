@@ -1,0 +1,83 @@
+[viewBag]
+==
+<header class="header" id="pageHeader">
+	<div class="header__wrapper">
+		<a class="header__logo"
+		{% if this.page.url !='/' %}
+			href="{{ '/'|app }}" aria-label="Переход на главную"
+		{% endif %}>
+			<svg width="169">
+				<use xlink:href="{{ 'assets/images/sprite_auto.svg#logo'|theme }}"></use>
+			</svg>
+		</a>
+		<div id="pageMenuWrapper" class="header__inner">
+			<nav class="header__nav">
+				<a class="header__link
+				{% if this.page.id == 'catalog' %}header__link--active{% endif %}" {% if this.page.id !='catalog'
+					%}href="{{ 'catalog'|page }}" {% endif %}>Проекты</a>
+
+				<a class="header__link
+				{% if this.page.id == 'uslugi' %}header__link--active{% endif %}" {% if this.page.id !='uslugi'
+					%}href="{{ 'uslugi'|page }}" {% endif %}>Услуги</a>
+
+				<a class="header__link
+				{% if this.page.id == 'tehnologii' %}header__link--active{% endif %}" {% if this.page.id !='tehnologii'
+					%}href="{{ 'tehnologii'|page }}" {% endif %}>Технологии</a>
+
+				<a class="header__link
+				{% if this.page.id == 'o-nas' %}header__link--active{% endif %}" {% if this.page.id !='o-nas'
+					%}href="{{ 'o-nas'|page }}" {% endif %}>О нас</a>
+					
+				<a class="header__link
+				{% if this.page.id == 'kontakty' %}header__link--active{% endif %}" {% if this.page.id !='kontakty'
+					%}href="{{ 'kontakty'|page }}" {% endif %}>Контакты</a>
+			</nav>
+			<!-- <a class="header__login" href="##">
+        <svg>
+          <use xlink:href="{{ 'assets/images/sprite_auto.svg#login'|theme }}"></use>
+        </svg>
+        Войти
+      </a> -->
+			<div class="header__social  socials">
+				<a class="socials__link" href="https://t.me/mansio_group" target="_blank" rel="nofollow">
+					<svg class="socials__icon  socials__icon--tg" width="27" height="23">
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#telegram'|theme }}"></use>
+					</svg>
+				</a>
+				<a class="socials__link"
+					href="https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20"
+					target="_blank" rel="nofollow">
+					<svg class="socials__icon  socials__icon--wa" width="23" height="23">
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#whatsapp'|theme }}"></use>
+					</svg>
+				</a>
+				<a class="socials__link" href="https://www.instagram.com/mansio_group.ru/" target="_blank" rel="nofollow">
+					<svg class="socials__icon">
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#instagram'|theme }}"></use>
+					</svg>
+				</a>
+				<a class="socials__link" href="https://business.facebook.com/Mansio-Строительство-домов-103324025394478/"
+					target="_blank" rel="nofollow">
+					<svg class="socials__icon">
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#facebook'|theme }}"></use>
+					</svg>
+				</a>
+				<a class="socials__link" href="https://vm.tiktok.com/ZSeSrcbk3/" target="_blank" rel="nofollow">
+					<svg class="socials__icon">
+						<use xlink:href="{{ 'assets/images/sprite_auto.svg#tik-tok'|theme }}"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="header__contacts">
+				<a class="header__phone" href="tel:+74951820242" rel="nofollow">+7 (495) 182-02-42</a>
+				<button class="header__consultation" type="button" data-modal="back-call">Получить консультацию</button>
+			</div>
+		</div>
+		<button id="menuBtn" class="menu" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+	</div>
+</header>
