@@ -133,10 +133,10 @@ $this['types'] = $types;
 						<td class="datasheet__td project__author-row">
 							<div class="project__author-content author">
 								<picture class="author__picture-wrap">
-									<source srcset="{{ 'assets/images/content/girlcall.webp'|theme }} 1x,
+									<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{{ 'assets/images/content/girlcall.webp'|theme }} 1x,
 																	{{ 'assets/images/content/girlcall@2x.webp'|theme }} 2x"
 										type="image/webp">
-									<img class="author__img" src="{{ 'assets/images/content/girlcall.png'|theme }}"
+									<img class="author__img lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/images/content/girlcall.png'|theme }}"
 										srcset="{{ 'assets/images/content/girlcall@2x.png'|theme }} 2x" width="102"
 										alt="Архитектор команды MANSIO GROUP Полина Авсеева" />
 								</picture>
@@ -410,8 +410,8 @@ $this['types'] = $types;
 							</div>
 							<div class="person__foto-wrap action-call__person-foto">
 								<picture>
-									<source srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x" type="image/webp">
-									<img src="{{ 'assets/images/content/manager.png'|theme }}"
+									<source srcset="{{ 'assets/images/placeholders/dummy-image-651x799.gif' }}" data-srcset="{{ 'assets/images/content/manager.webp'|theme }} 1x" type="image/webp">
+									<img class="lazy" src="{{ 'assets/images/placeholders/dummy-image-651x799.gif' }}" data-src="{{ 'assets/images/content/manager.png'|theme }}"
 										alt="Фотография Главный архитектор Илларионов Илья Николаевич" width="651">
 								</picture>
 							</div>
